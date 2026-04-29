@@ -1,0 +1,69 @@
+==============================================================================
+OQ-OQS2 v0 — Lindblad superoperator → L0 error decomposition
+==============================================================================
+
+E1 — Pure dephasing
+------------------------------------------------------------------------------
+  H = (ω/2)σ_z, ω = 1.0
+  L = σ_z, γ_1 = γ/2 = 0.25
+  Generator-level decomposition L = L_H + L_D:
+    ‖L_H‖ (Hamiltonian generator) = 1.0000
+    ‖L_D‖ (Dissipator generator)  = 0.5000
+  V1 commutativity test: ‖[L_H, L_D]‖ = 0.0000e+00
+     → L_H and L_D commute for pure dephasing (Z generator + Z dissipator)
+
+  V2 — Closest-unitary residual at small dt:
+            dt      ‖Φ_dt − U_*‖        / dt     ‖L_D‖dt
+        0.1000      4.877058e-02      0.4877      0.0500
+        0.0500      2.469009e-02      0.4938      0.0250
+        0.0100      4.987521e-03      0.4988      0.0050
+        0.0050      2.496878e-03      0.4994      0.0025
+        0.0010      4.998750e-04      0.4999      0.0005
+    → Diff scales as O(dt) with rate ≈ ‖L_D‖ (V2 confirmed)
+
+  V3 — Kraus-level mixing demonstration (t = 1.0):
+    K_0 = √0.8033 · exp(-i(ω/2)σ_z t)  ← unitary phase + damping factor
+    K_1 = √0.1967 · exp(-i(ω/2)σ_z t) · σ_z  ← unitary phase + jump
+    BOTH K_0 and K_1 contain unitary phase exp(-i(ω/2)σ_z t).
+    Generator partition L_H | L_D is clean, but Kraus operators
+    K_0, K_1 each carry both Hamiltonian (unitary phase) AND
+    dissipator (damping factor / jump operator) information.
+    ‖K_0 ρ K_0† + K_1 ρ K_1† − exp(L t)ρ‖ = 1.67e-16  (Kraus = Lindblad ✓)
+
+E2 — Amplitude damping (H = 0)
+------------------------------------------------------------------------------
+  H = 0  (no Hamiltonian)
+  L = |0><1| (lowering, decay |1> → |0>), γ = 1.0
+  Generator-level decomposition:
+    ‖L_H‖ (Hamiltonian generator) = 0.0000  ← zero (no H)
+    ‖L_D‖ (Dissipator generator)  = 1.4142
+    → error_arithmetic = 0, all error is error_projection.
+  Kraus reconstruction ‖K_0 ρ K_0† + K_1 ρ K_1† − exp(L t)ρ‖ = 0.00e+00
+  Both K_0 (no-jump) and K_1 (jump) trace back to dissipator alone
+  → clean instance with NO Hamiltonian: K_0 is anticommutator
+    damping piece, K_1 is jump piece — full dissipator content.
+
+==============================================================================
+Summary — OQ-OQS2 verification
+==============================================================================
+
+Generator (superoperator) level — CLEAN bijection:
+  L = L_H + L_D
+  L_H ρ = -i[H, ρ]                              ↔ error_arithmetic
+  L_D ρ = Σ γ_k (L_k ρ L_k† − ½{L_k†L_k, ρ})    ↔ error_projection
+  γ_k(β) thermal occupation factor                ↔ error_noise
+
+Kraus operator level — MIXED:
+  K_0(dt) ≈ I − i H_eff dt where H_eff = H − (i/2) Σ γ_k L_k†L_k
+  bundles Hamiltonian unitary phase AND dissipator anticommutator
+  damping. The L0 partition is canonical at the generator level,
+  not at the discrete Kraus-operator level.
+
+Closest-unitary diamond-norm interpretation:
+  Φ_dt = U_*^(dt) ∘ Φ_ncp^(dt)
+  where U_*^(dt) ≈ exp(L_H dt) is the closest unitary, and the
+  non-unitary residual rate equals ‖L_D‖ (V2 confirmed ≈ 0.5 for E1).
+
+Concrete instances (E1 dephasing + E2 amplitude damping) verified
+Kraus = Lindblad to ~1e-15 (RK4 + matrix exponential agreement).
+==============================================================================

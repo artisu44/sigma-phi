@@ -1,0 +1,76 @@
+==============================================================================
+c_information_geometry v0 — Theorem 2.1 numerical verification
+==============================================================================
+
+T1 — Gaussian N(μ, 1) single-parameter Fisher metric
+------------------------------------------------------------------------------
+  Closed-form KL: D_KL(N(μ,1) || N(μ+ε,1)) = ε² / 2
+  Theorem 2.1(A) prediction: g_F(μ) = 1, so KL ≈ (1/2)·1·ε² + O(ε³)
+
+         ε     D_KL exact       ½ g_F ε²   rel error
+    0.5000   1.250000e-01   1.250000e-01    0.00e+00
+    0.1000   5.000000e-03   5.000000e-03    0.00e+00
+    0.0500   1.250000e-03   1.250000e-03    0.00e+00
+    0.0100   5.000000e-05   5.000000e-05    0.00e+00
+    0.0010   5.000000e-07   5.000000e-07    0.00e+00
+  → exact match (Gaussian N(μ,1) has closed-form D_KL = ε²/2)
+  → T1 PASS (Theorem 2.1(A) verified for N(μ,1))
+
+T2 — Gaussian N(μ, σ²) two-parameter Fisher matrix
+------------------------------------------------------------------------------
+  Analytic g_F(μ, σ) = diag(1/σ², 2/σ²)
+  Theorem 2.1(A): D_KL ≈ (1/2)·(ε_μ²/σ² + 2 ε_σ²/σ²) for small ε
+
+  base point (μ, σ) = (0.0, 1.5)
+  g_F analytic = diag(0.4444, 0.8889)
+
+  direction            |ε|           D_KL    ½ ε^T g_F ε     rel err
+  (1,0) μ-axis      0.0500   5.555556e-04   5.555556e-04    4.35e-14
+  (1,0) μ-axis      0.0100   2.222222e-05   2.222222e-05    1.56e-12
+  (0,1) σ-axis      0.0500   1.052050e-03   1.111111e-03    5.61e-02
+  (0,1) σ-axis      0.0100   4.395503e-05   4.444444e-05    1.11e-02
+  (1,1)/√2          0.0500   7.995379e-04   8.333333e-04    4.23e-02
+  (1,1)/√2          0.0100   3.305582e-05   3.333333e-05    8.40e-03
+  (2,-1)/√5         0.0500   6.858541e-04   6.666667e-04    2.80e-02
+  (2,-1)/√5         0.0100   2.681750e-05   2.666667e-05    5.62e-03
+  → T2 PASS (quadratic-form match across 4 directions × 2 magnitudes;
+    O(ε³) relative-error scaling confirmed, rel err ≲ 2|ε| in all cases)
+
+T3 — Over-parameterization → local g_F rank loss
+------------------------------------------------------------------------------
+  Family: p(x; α, β) = N(α + β, 1)
+  The likelihood depends on α + β only; (α, β) is degenerate.
+  Predicted: g_F has rank 1, kernel along (1, -1) direction.
+
+  g_F (analytic) =
+     [[1.00, 1.00],
+      [1.00, 1.00]]
+  eigenvalues   = [0. 2.]
+  det g_F       = 0.0000
+  null direction (kernel of g_F)  = [-0.70710678  0.70710678]  (corresponds to (1,-1)/√2)
+
+  KL along null direction (1, -1)/√2  (should be 0 to all orders)
+    ε along null, |ε| = 0.500 → mean_shift = 0.00e+00, D_KL = 0.00e+00
+    ε along null, |ε| = 0.100 → mean_shift = 0.00e+00, D_KL = 0.00e+00
+    ε along null, |ε| = 0.010 → mean_shift = 0.00e+00, D_KL = 0.00e+00
+  → identical distributions along the kernel direction (D_KL ≡ 0)
+  → T3 PASS (g_F kernel direction = local infinitesimal ker_gauge
+    of Arrow 1: parameter directions in which observations cannot
+    distinguish θ from θ + ε to first or any order)
+
+==============================================================================
+Summary — c_information_geometry.md Theorem 2.1 verification
+==============================================================================
+
+  [PASS] T1 N(μ,1): KL = ½ I_F ε² exact match (closed form)
+  [PASS] T2 N(μ,σ²): KL ≈ ½ ε^T g_F ε across 4 directions × 2 magnitudes
+         (O(ε³) error scaling: rel err ∝ ε confirmed)
+  [PASS] T3 over-parameterized N(α+β,1): det g_F = 0 along (1,-1)
+         direction, D_KL ≡ 0 along kernel — local Arrow 1⁻¹ rank loss
+
+  → Theorem 2.1 (Fisher-Rao = Arrow 1⁻¹ local linearization)
+    numerically confirmed:
+      (A) KL local expansion ↔ Fisher quadratic form ✓
+      (B) Cramér-Rao precision floor (analytic, not tested here)
+      (C) det g_F = 0 ↔ local infinitesimal ker_gauge ✓
+==============================================================================

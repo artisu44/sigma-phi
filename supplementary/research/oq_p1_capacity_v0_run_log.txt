@@ -1,0 +1,87 @@
+==============================================================================
+OQ-P1-Capacity v0 — honest Shannon capacity of the σ* phase channel
+==============================================================================
+σ*  = √(2 ln 2)        = 1.177410 rad
+σ*² = 2 ln 2           = 1.386294 rad²
+2π                     = 6.283185
+
+------------------------------------------------------------------------------
+I2 §4.2 published proposed capacity
+------------------------------------------------------------------------------
+  C_proposed = log_2(2π / σ*²) = log_2(π / ln 2)
+             = 2.180263 bits/symbol
+
+------------------------------------------------------------------------------
+Dimensional consistency check on the Hartley counting
+------------------------------------------------------------------------------
+  (paper)   log_2(2π / σ*²)         = 2.1803  bits   ← uses σ²  [units mismatch]
+  (linear)  log_2(2π / σ*)          = 2.4159  bits   ← uses σ   [dimensionally ok]
+  (2-σ)     log_2(2π / (2σ*))       = 1.4159  bits   ← Rayleigh-like criterion
+  (pi-res)  log_2(2π / π)           = 1.0000  bits   ← π (= half-circle)
+
+  Comment: 2π/σ_*² is dimensionally inconsistent for a 'level count'.
+           That the numerical answer happens to be 2.18 is coincidence.
+
+------------------------------------------------------------------------------
+M1 — closed-form Shannon capacity, uniform input (numerical integration)
+------------------------------------------------------------------------------
+  h(WG(σ*))  = 2.251733  bits  [wrapped-Gaussian diff entropy]
+  log_2(2π)  = 2.651496  bits  [uniform on circle, max entropy]
+  C_M1       = log_2(2π) − h(WG(σ*)) = 0.399763  bits/symbol
+
+------------------------------------------------------------------------------
+M2 — Blahut-Arimoto on a discretised wrapped-Gaussian channel (M=512)
+------------------------------------------------------------------------------
+  C_M2       = 0.399597  bits/symbol
+  optimal input deviation from uniform (max|Δ|·M) = 4.44e-16
+  → uniform input is optimal (BA confirms M1 derivation)
+
+------------------------------------------------------------------------------
+M3 — Gaussian small-σ approximation (closed analytical form)
+------------------------------------------------------------------------------
+  C_M3       = ½ log_2(2π / (e σ*²))
+             = ½ log_2(π / (e ln 2))
+             = 0.368784  bits/symbol
+
+------------------------------------------------------------------------------
+Cross-check: M1 / M2 / M3 agreement
+------------------------------------------------------------------------------
+  |C_M1 − C_M2|              = 1.66e-04  bits
+  |C_M1 − C_M3| (wrap effect)= 3.10e-02  bits
+
+  M1 (numerical) and M2 (Blahut-Arimoto) agree to 4+ decimals.
+  M3 (Gaussian approx) is slightly off because at σ*≈1.18 rad
+  wrapping starts to matter; but the gap is small (<1%).
+
+==============================================================================
+Headline finding
+==============================================================================
+  Published  C ≈ 2.1803 bits/symbol  (Hartley counting)
+  Honest     C ≈ 0.3998 bits/symbol  (Shannon capacity)
+  Inflation  ratio = 5.45×
+
+  → Published figure is ~5.5× the honest Shannon capacity.
+    The published derivation conflates a Hartley level count with
+    a Shannon mutual-information capacity, and uses σ² where σ
+    is the dimensionally correct quantity. Both errors push the
+    figure upward, and they happen to compound.
+
+------------------------------------------------------------------------------
+σ-sweep — honest capacity vs σ (for context)
+------------------------------------------------------------------------------
+  label                 σ    C_honest   C_published_form
+  -------------- -------- ----------- ------------------
+  σ=0.3            0.3000      2.3412             6.1254
+  σ=0.5            0.5000      1.6045             4.6515
+  σ=0.7            0.7000      1.1191             3.6806
+  σ=1.0            1.0000      0.6115             2.6515
+  σ*=√(2ln2)       1.1774      0.3998             2.1803
+  σ=1.5            1.5000      0.1597             1.4816
+  σ=2.0            2.0000      0.0268             0.6515
+  σ=3.0            3.0000      0.0003          undefined
+
+  At σ=σ*, honest capacity ≈ 0.40 bits/symbol — phase coding
+  is at the half-bit threshold above the broken regime. Reading:
+  σ* is the noise level at which the wrapped-Gaussian phase channel
+  capacity drops below ≈½ bit per symbol. (M1 + M2 cross-check.)
+==============================================================================

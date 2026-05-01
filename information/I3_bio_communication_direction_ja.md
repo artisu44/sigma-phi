@@ -29,6 +29,21 @@ User insight (2026-04-27): "**生物は DNA / EEG / 神経系 と通信手段を
 
 ただし本 direction paper は **full formal claim でない** ─ 現状 ESTABLISHED biological anchor 2 件 (DNA + EEG)、framework triangulation discipline (`meta/triangulation_methodology.md §6.1` 3-vertex 必須) で 3+ instance pre-registration が **structural claim 昇格条件**。本 paper は forward task plan として方向性配置。
 
+### §0.1 Direction-axis position (biological anchor の A/B native split)
+
+`user_observation_direction_axis` (ESTABLISHED 2026-05-01) の A/B observation direction axis において、本論 2 ESTABLISHED biological anchor は **異 direction native の 2 anchor** で I framework の "A + B co-resident" structure を biological context で再現:
+
+| Anchor | Direction | Native | Biological context |
+|---|---|---|---|
+| **DNA codon = 3** (S17 codebook argmax instance) | **A-native** (discrete codebook integer argmax = 3) | Hartley density discrete optimum (整数 cardinality count) | Genetic code 進化的固定 (~40億年) |
+| **EEG σ\* = √(2 ln 2)** (P1 σ\*-channel instance) | **B-native** (continuous Shannon entropy ½-bit threshold) | wrapped-Gaussian phase channel capacity | Brain phase coherence regulation (real-time) |
+
+**Pattern observation**: 生物 2 anchor の direction split は I1 framework の Hartley A / Shannon B 1+4 split と integral structurally consistent — **biology が discrete (A-side) と continuous (B-side) の 2 paradigm を異なる scale (genetic code vs brain phase) で同時 deploy** している。これは "biology が I-series 5-paradigm framework を independent 自然選択" hypothesis (本論主張) を direction-axis layer で **2-anchor split as evidence** で補強。
+
+**3+ instance pre-registration への direction-tag prediction**: 本論 §3.2 で挙げた pre-reg candidates (LFP / ribosome / 等) は direction-tag で advance prediction 可能 — 神経 oscillation = B-side native (continuous entropy regulation 候補)、ribosome codon-reading = A-side native (discrete codebook 候補)、これにより triangulation 3-vertex が direction-axis triangulation (A + B + bridge) として組まれれば最強の framework anchoring が達成される。
+
+**Audit reference**: `project_graveyard_audit_complete_2026_05_01` (direction-axis Tier 0 reflection)、I1 §1.4 (Hartley A / Shannon B 1+4 split)。
+
 ---
 
 ## §1 既存生物 anchor (research already done)

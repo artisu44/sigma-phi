@@ -69,6 +69,8 @@ Q1 §8.2 で予告された Q2 主題 (Open QS chain での観測理論 statisti
 
 **用語**: Q1 §1.3 の "gauge" 3 用法 (gauge¹/gauge²/gauge³) を継承。本論固有の追加用語: **Cumulative coarse-graining** (S1 → S2 → S3 → S4 chain, 累積的 information loss) / **KMS state** ($\omega(A \alpha_t(B)) \to \omega(\alpha_t(B) A) e^{-\beta \omega}$ を満たす thermal equilibrium state) / **Modular flow** $\sigma_t = \Delta^{it} A \Delta^{-it}$ (cyclic separating vector Ω に対する automorphism) / **Pointer basis** ($H_{int}$ と commute する system observable eigenbasis、environment selection) / **Quasiparticle weight Z** ($|\langle k|\psi_q\rangle|^2 \in (0, 1]$、bare/quasiparticle overlap) / **4-stage ln 2 chain** (c_s² = 1/2 → S(ρ_max) = log 2 → βℏω₀ = log 2 → kT ln 2 の 4 段 instance chain)。
 
+**Direction-axis position**: Q1 §1.4 の Q-framework B-primary native position (`user_observation_direction_axis` ESTABLISHED 2026-05-01) を本論も継承。本論主領域 (open quantum system / KMS thermal equilibrium / FDT / 4-stage chain) は **B-direction native** (無限 thermal ensemble → 有限 system observable projection / continuous modular flow → discrete pointer basis selection / Landauer kT ln 2 = Shannon-line B-direction continuous chain instance)。**4-stage ln 2 chain は S13 ln 2 fixed point の B-direction (Shannon-line) instance**、5-stage chain (Born/vN/FDT/Landauer/σ\*) と並行。Cross-direction screening rule (`feedback_cross_direction_identity_screen`) を本論内で internal screening rule として運用、N1 / I1 framework header との cross-paper claim では direction-tag pre-check を必須化。
+
 ---
 
 ## §2 4-stage chain S15 residence map

@@ -64,6 +64,41 @@ While Paper D (multi-domain) established the universality of observation theory 
 
 The "ker_gauge" of T-AAS refers to the **gauge¹** family. gauge² appears only in §6.2 and §8.2 forward references and does not enter the main structure of this paper.
 
+### 1.4 Direction-axis position (NT-framework = A-primary native)
+
+Under the A/B observation direction axis of `user_observation_direction_axis` (ESTABLISHED 2026-05-01), the NT framework of this paper occupies the **A-direction primary native** position (distinct from Q1 = B-primary, I1 = A+B co-resident; this paper provides the A-side anchor).
+
+| Side | Direction | Observation mode | NT-side instance |
+|---|---|---|---|
+| **additive / discrete / NT** | **A (finite → infinite)** | **finite observation → outer extrapolation toward infinity** | **primary domain of this paper** |
+| multiplicative / continuous / quantum | B (infinite → finite) | infinite ontology → inner projection onto finite | (out of scope; handled by Q1 framework) |
+
+**A-direction-native instances on the NT side**:
+- **PNT / prime density** (§3.2 Scan layer): finite count of primes up to $N$ → asymptotic extrapolation $\pi(N) \sim N/\log N$
+- **Class number formula bridge** (§4.1): in the rank 0 case, $h_K = \lim_{s\to 1}(s-1)L(s, \chi)$ provides an **explicit B-direction lift via a lim operator** = the canonical bridge that projects A-native ($h_K$, finite class number) through B-native L
+- **Hasse-Weil L predictive content** (§3.3 / N4 §7): weight-2 Hasse-Weil L is **B-native** (Galois rep + Euler product); within this N1 framework it is the B-side bridge instance, and in N4 it functions as a genuine BSD analytic-rank detector
+- **Dirichlet L** (N3 §4): weight-1 Dirichlet L is **A-native** (finite character on a finite group); the framework's predictive content here degrades to "structural fit only" — exactly the direction-tag native scope
+
+**Cross-direction bridge instances (§4-§6)**:
+- **S14 = π / ln 2** (`c_arrow_bridge_constants §4` + this paper §4.5): **canonical bridge** between Arrow 1 (π involution, A-side) and Arrow 2 (ln 2 involution, B-side) under involution × involution role-match; the ratio that links the N1 (A-primary) and Q1 (B-primary) framework headers
+- **S_0 = 2π/e** (`c_arrow_bridge_constants §13` ESTABLISHED): bridge ratio between Arrow 1 (2π period, A) and Arrow 3 (e argmax, B); pins framework universality at both A-side and B-side anchors
+- **κ(2) = √3/4 candidate** (`c_recursive_floor_principle §6.7`): A-native (2D JP iteration) ↔ B-native (closed-form algebra) **cross-direction near-coincidence without bridge** = a direction-tag screening rule G1 REJECT prediction instance, with forward-actionable promotion path = bridge-operator-construction OQ
+- **N4 weight-class transfer pattern** (N4 §7.2.1): the explanation of weight-class-dependent transfer (weight-2 Hasse-Weil B↔B genuine BSD vs weight-1 Dirichlet A↔B "structural fit only") at the direction-tag level = `feedback_cross_direction_identity_screen` 6/6 forward test reference instance #2
+
+**Screening rule application**: when making identity claims within this paper, every relevant quantity must first be tagged (A-native / B-native / bridge / transition); for cross-direction pairs without an explicit bridge operator (lim / projection / Hecke / regulator etc.), strict identity is rerouted to near-coincidence + bridge candidate (`feedback_cross_direction_identity_screen` 5-step operational order). Position parallel to Q1 §1.4 / I1 §1.4.
+
+**N1 / Q1 / I1 framework header parallel** (cross-paper):
+
+| Header | Native primary | Prominent bridge instance |
+|---|---|---|
+| **N1 (NT)** | **A-primary** | π (S14 numerator), class number formula bridge $h = \lim(s-1)L$ (rank-0) |
+| Q1 (Quantum) | B-primary | σ\* (S4), Born rule projection |
+| I1 (Information) | A + B co-resident (Hartley A / Shannon B 1+4 split) | S_0 = 2π/e, S13 ln 2, σ\* |
+
+The direction-axis triangulation of these three headers verifies framework universality at A-side / B-side / co-resident anchors — a 3-instance verification — with the I framework supporting the NT-Quantum bridge as an operational language layer.
+
+**Audit reference**: `project_graveyard_audit_complete_2026_05_01` (Tier 1-4 audit completion); `feedback_cross_direction_identity_screen` (5-step operational order).
+
 ---
 
 ## §2 Axioms of Observation Theory

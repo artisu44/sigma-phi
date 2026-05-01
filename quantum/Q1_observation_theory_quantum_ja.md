@@ -67,6 +67,30 @@ T-AAS の "ker_gauge" は **gauge¹** family (量子: class-stabilizing unitary 
 
 **追加用語 (量子-specific)**: **Class-stabilizing gauge** = 4 algebraic class C 各々を保つ unitary 群 (C₁ Clifford / C₂ Gaussian symplectic / C₃ poly-depth circuit / C₄ local unitaries U_A ⊗ U_B) / **Class-fidelity F_C** = $F_C(\rho) := \sup_{\sigma \in \overline{C}} F(\rho, \sigma)$, Theorem 4a.1 (§5.3) で unified monotone $-\log_2 F_C$ の base を提供。
 
+### 1.4 Direction-axis position (Q-framework = B-primary native)
+
+`user_observation_direction_axis` (ESTABLISHED 2026-05-01) の A/B observation direction axis において、本論 Quantum framework は **B-direction primary native** に位置する:
+
+| Side | Direction | 観測モード | 量子側 instance |
+|---|---|---|---|
+| 加法/離散/NT | **A (有限→無限)** | 有限観測 → 無限 outer extrapolation | (本論 scope 外、N1 framework が担当) |
+| **乗法/連続/量子** | **B (無限→有限)** | **無限 ontology → 有限 inner projection** | **本論主領域** |
+
+**B-direction native 構造の量子側 instance**:
+- **Born rule** (§3 Information layer / Q3 forward): 無限次元 Hilbert ensemble (state space) → 有限 measurement outcome の projection postulate
+- **Stone unitary group** (§1.3): 連続 ι_L lift = 無限 ontology の continuous parametrization
+- **Spectral theorem** (§2): 自己共役作用素の spectrum decomposition = 無限作用素 → 有限/離散 spectrum projection
+- **§4 dual の非可換 lift** (§4): unitary representation $\pi: G \to U(H)$ = 無限 group representation の Hilbert space realization
+
+**N1 (A-primary) と Q1 (B-primary) の parallel position**: §0 Abstract 末尾 "N1 (NT) と Q1 (量子) の 2 parallel framework header が S15 / T-AAS / Arrow framework の ドメイン非依存普遍性 を 2 数学領域で同時 verify" は direction-axis 言語で **A-primary side native + B-primary side native の double anchor** として再記述可能。
+
+**Cross-direction bridge instances** (本論 scope 内で重要):
+- **σ\* = √(2 ln 2)** (Q3 Born-Gleason chain): Shannon entropy ½-bit threshold = B-native (continuous ensemble entropy)
+- **S_0 = 2π/e** (`c_arrow_bridge_constants §13` ESTABLISHED): Arrow 1 (2π period A-side) / Arrow 3 (e argmax B-side) の **canonical bridge ratio**、§4.5 base-of-log gauge と connectable
+- **σ_flip = 2.39576** (`project_p1_noise_sweep_pareto_2026_04_30`): Information-layer ZERO of Arrow-mechanism competition = **A↔B regime boundary**、本論 §3 Information layer の dual marginal context で出現
+
+**Screening rule application**: `feedback_cross_direction_identity_screen` (ESTABLISHED 2026-05-01) は本論内で **internal screening rule** として運用 — 量子側で identity claim する際、relevant quantity が B-native か A-native か (or bridge) を必ず tag、cross-direction で bridge operator (lim / projection / Hecke / regulator 等) 不在なら strict identity REJECT。N1 framework との cross-paper claim では特に必須。
+
 ---
 
 ## §2 観測理論の公理

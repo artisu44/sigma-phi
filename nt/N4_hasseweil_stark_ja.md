@@ -431,6 +431,25 @@ N1 §6 NT-internal Arrow 間 triangulation は **Paper C / Stark / Brauer** の 
 
 → **Framework predictive transfer pattern is weight-class dependent**: weight 1 (Dirichlet L) structural fit only / weight 2 (Hasse-Weil L) genuine (BSD analytic rank detector)。これは N1 framework の **rich predictive structure** を demonstrate — 各 weight-class が異なる framework content を carry し、Path 2 family member ごとに predictive scope が determined。
 
+#### 7.2.1 Direction-tag rationale (weight-class transfer pattern の構造的根拠)
+
+`feedback_cross_direction_identity_screen` (ESTABLISHED 2026-05-01) と `user_observation_direction_axis` (A: 有限→無限 / B: 無限→有限) の framework で見ると、weight-class dependent transfer pattern は **direction-axis** で sharpen される:
+
+| Layer | weight-1 Dirichlet L | weight-2 Hasse-Weil L |
+|---|---|---|
+| Native object | character $\chi: (\mathbb{Z}/N)^\times \to \mathbb{C}^\times$ on **abelian finite group** | Tate module → 2-dim ℓ-adic Galois rep on Gal($\bar\mathbb{Q}/\mathbb{Q}$) **infinite profinite non-abelian** |
+| Combinatorial structure | finite character orthogonality + finite Gauss sum | infinite Fourier expansion (weight-2 newform) + infinite Euler product |
+| **Direction tag** | **A-native** (有限 character on finite group) | **B-native** (無限 ensemble: Galois + Euler product) |
+| Framework content (BSD-style) | $K \cdot t^2 \to r$ projection: B-direction extraction | $K \cdot t^2 \to r$ projection: B-direction extraction |
+| Direction match | **A-native object ↔ B-direction content = mismatch** | **B-native object ↔ B-direction content = match** |
+| Predictive transfer | "structural fit only" (identity-level trivial coincidence) | **genuine BSD analytic rank detector** (9/10 within 5%) |
+
+**Class number formula bridge instance (rank 0)**: $h = \lim_{s \to 1}(s-1)L(s,\chi)$ は explicit bridge operator (lim) で A-native ($h$, 有限 class number) を B-native L 経由で project。**rank 0 では bridge 明示で identity holds**、これが weight-1 でも predictive content が valid なる唯一の routing。
+
+**Stark rank ≥ 1 "candidate+ 3 cases only"** (§4.2-§4.4) は同じ direction-axis logic で説明される — bridge (regulator) construction が一般には困難な instance、Brauer/induction 経由の analytic closure が成立する Galois 群クラス (S_3, A_4/V_4 等) のみで bridge 確立。OQ-NT-7/8 (§5) はこの bridge 構成可能 / 不可能の境界を tier classification で systematic に切り出す enterprise。
+
+**Reference instance status**: 本 §7.2 weight-class transfer pattern は `feedback_cross_direction_identity_screen` の **6/6 forward test PASS の reference instance #2** として 2026-05-01 audit で確認済。Audit log: `project_graveyard_audit_complete_2026_05_01`。
+
 ### 7.3 N5 forward bridge
 
 | 後続 | 主題 | 本論からの forward |

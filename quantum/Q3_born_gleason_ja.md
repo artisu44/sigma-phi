@@ -68,6 +68,8 @@ Q3 が拾う Q1-Q2 forward task: Q1 §8.2 (Q3 forward 3 主題) / Q2 §8.2 (Q3 f
 
 **用語** (Q1 §1.3 + Q2 §1.4 継承 + 本論固有追加): **Effects** $E(\mathcal{H})$ ($0 \leq E \leq I$ 正作用素全体, projection は subset) / **POVM** ($\{E_i\}$ with $\sum_i E_i = I$, $E_i \in E(\mathcal{H})$) / **Generalized probability measure** $v: E(\mathcal{H}) \to [0, 1]$ ((P1)-(P3) 満たす) / **Dispersion-free valuation** (各 projection P で $v(P) \in \{0, 1\}$, 古典的「determinism」候補) / **Half-amplitude convention** ($E[\cos Z] = 1/2$ threshold gauge) / **Frame function** (Gleason theorem における projection 上 finite-additive function) / **Quadratic lift root** (ln 2 → $\sqrt{2 \ln 2}$ Gaussian char fcn inversion)。
 
+**Direction-axis position**: Q1 §1.4 の Q-framework B-primary native position (`user_observation_direction_axis` ESTABLISHED 2026-05-01) を本論も継承。**Born rule (Tr(ρE)) は B-direction primary instance の最深 root** — 無限次元 Hilbert ensemble (state space) → 有限 measurement outcome の projection postulate、Q-framework の B-native canonical mechanism。**σ\* = √(2 ln 2) も B-native** (continuous Gaussian phase channel ½-bit threshold via $E[\cos Z] = 1/2$ char fcn inversion)、I2 §4.4.1 と direction-tag 整合。**N5 parallel position の direction-axis 翻訳**: N5 = NT-series final closure (A-primary native, Brauer 5-tier closure tier theory + 8-gauge) ↔ Q3 = Q-series final closure (B-primary native, Born-Gleason + σ\* gauge) = **A-side closure と B-side closure の dual final-paper pair**、framework universality を 2 framework header の closure level で同時 verify。Cross-direction screening rule (`feedback_cross_direction_identity_screen`) を本論内で internal screening rule として運用、N5 / I-series cross-paper claim では direction-tag pre-check 必須。
+
 ---
 
 ## §2 Effects と POVM framework

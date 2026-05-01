@@ -2,7 +2,7 @@
 
 **Subtitle**: signal theory (0/1/2 scaffold) / quantum communication theory (3+ relational, formal quantum advantage) / **novel communication theory 5 proposals** (framework-derived) / I-series final closure
 
-**Version**: v0.2 (P1 capacity correction: 2.18 → 0.40 bits/symbol honest Shannon, 2026-04-28)
+**Version**: v0.4 (§4.5 NEW Discrete dual marginal extension via spectral lift — 6 sub-sections: motivation / 2-route (native vs. spectral lifted) / §13.7 4-step pipeline + symbol mapping / first measurement (precision floor + prime gap WIN=4096 AUC 0.93) / 3 receiver-choice regimes (σ_0 / σ_x / σ_flip = 2.396 G3 transcendental) + Δ_dual = 1.604 bit/sym richness gain / 7 use case map (forward to §10.5 RESOLVED v0); §10.5 OQ-Practical-Tradeoff-Quantification RESOLVED v0; §11.3 OQ table updated; §6.1 / §6.4 / §10.3 P3 scope markers added by S17 recursive rule-5 audit; 2026-04-30 late dusk +2/+3/+5; v0.3.1 σ\* identity REJECTED + σ_0 PROMOTED 2026-04-30 evening; v0.3 W₁/W₂ gauge-conditioning 2026-04-30 morning; v0.2 P1 capacity 2.18 → 0.40 bits/symbol 2026-04-28)
 **Status**: DRAFT — I-series final paper. Building on I1 (framework header + 5-anchor information capacity), this paper completes the **3-tier communication theory** (signal theory / quantum communication theory / novel communication theory) + I-series cycle completion + triple cross-domain anchor across the 3 framework headers (N1-N5 / Q1-Q3 / I1-I2).
 **Prerequisites (L0)**: `observation_canon.md`, `finite_observation.md`, `identity_asymmetry.md`
 **Prerequisites (L1 core)**: `c_phase_complex.md §4 + §5`, `c_theorems_master.md` (S12-S17), `c_arrow_framework.md`, `c_arrow_obstruction.md §10-§11`, `c_arrow_bridge_constants.md §11 + §12`, `c_filtration_obstruction.md §8.5`, `c_observation_optimal_gauge.md`, **`c_information_theory.md` §2 (channel capacity), §6 (Fisher, Cramér-Rao)**
@@ -25,7 +25,7 @@ Communication theory is systematised into a domain-agnostic 3-tier structure —
 
 **(M2) Formal characterisation of quantum communication theory (3+ relational)** — Holevo bound $\chi \leq S(\bar\rho) - \sum p_x S(\rho_x) \leq \log d$ + HSW classical capacity over quantum channels + LSD quantum capacity + superdense coding (1 qubit + entanglement = 2 cbits, **2x density quantum advantage**) + teleportation (2 cbits + entanglement = 1 qubit) + QKD BB84 + no-cloning + Bennett-Shor entanglement-assisted classical capacity $C_E = 2 \log d$ vs. no-entanglement $C \leq \log d$ (**formal 2x advantage of entanglement-assisted**). **Formal characterisation of quantum advantage** = T-AAS C₄ Bell-local f_rational instance (Q1 §5; Δ_CHSH nonlocal capacity = mathematical anchor of quantum advantage).
 
-**(M3) Novel communication theory 5 proposals (framework-derived)** — (P1) **σ\* phase-channel** (Q3 §4 σ\* gauge instance, EEG ESTABLISHED; **honest Shannon capacity $C_{\sigma_*} \approx 0.40$ bits/symbol** — uniform-input wrapped-Gaussian phase channel, M1 (closed-form) + M2 (Blahut-Arimoto) cross-check, `research/oq_p1_capacity_v0`) / (P2) **4-class resource-stratified channel** (T-AAS lift; each class defines a distinct capacity sub-channel) / (P3) **qutrit info-density codebook** (S17 e-extremum discrete argmax, ~5.5% Hartley density advantage over qubit) / (P4) **5-stage ln 2 chain converter** (cross-instantiation channel mediated by the S13 universal natural unit) / (P5) **Arrow 1 kernel narrowness channel taxonomy** (lift of the Q1 §6 4-vertex sparsity classification to channel design). Each proposal is **directly derived** from the I1 §6 5-anchor framework.
+**(M3) Novel communication theory 5 proposals (framework-derived)** — (P1) **σ\* phase-channel** (Q3 §4 σ\* gauge instance, EEG ESTABLISHED; **honest Shannon capacity $C_{\sigma_*} \approx 0.40$ bits/symbol** — uniform-input wrapped-Gaussian phase channel, M1 (closed-form) + M2 (Blahut-Arimoto) cross-check, `research/oq_p1_capacity_v0`; v0.4 adds **§4.5 discrete-domain extension** — spectral lifted dual pipeline (τ + FFT + r,θ + Φ) + 3 σ-threshold receiver-choice regime (σ_0 = √(2π/e − 1) / σ_x ≈ 1.193 / σ_flip ≈ 2.396 G3 transcendental) + Δ_dual = ½ log₂(8π/e) ≈ 1.604 bit/sym richness gain + 7 engineering use case map) / (P2) **4-class resource-stratified channel** (T-AAS lift; each class defines a distinct capacity sub-channel) / (P3) **qutrit info-density codebook** (S17 e-extremum discrete argmax, ~5.5% Hartley density advantage over qubit, **scope-refined v0.4 by rule-5 recursive audit to Hartley density specifically**) / (P4) **5-stage ln 2 chain converter** (cross-instantiation channel mediated by the S13 universal natural unit) / (P5) **Arrow 1 kernel narrowness channel taxonomy** (lift of the Q1 §6 4-vertex sparsity classification to channel design). Each proposal is **directly derived** from the I1 §6 5-anchor framework.
 
 **(M4) I-series cycle completion + triple framework parallel** — **2-paper minimum cycle** I1 (framework header + 5-anchor information capacity theorem) → I2 (this paper, communication theory + 5 novel proposals) achieved (unlike the N-series 5-paper + Q-series 3-paper, the cycle closes at the minimum 2 papers; an information-side characteristic where the 5 anchors exist and the limit theorem is directly ESTABLISHED). Completing all **3 framework headers** — N1-N5 (NT, 5 fully formalised papers) + Q1-Q3 (quantum, 3 fully formalised papers) + I1-I2 (information, 2 fully formalised papers) = **10 fully formalised papers**, plus the I3 v0.0 direction placeholder (separate count) — achieves the **triple cross-domain anchor**, fully verifying the Paper D 6-domain triangulation by 3 specialisations and providing a **3-domain universal validity anchor** for observation theory.
 
@@ -227,12 +227,34 @@ where $h(\mathrm{WG}(\sigma))$ is the differential entropy of the wrapped Gaussi
 
 **v0 retraction note**: the v0 (initial-draft) figure $C \approx 2.18$ bits/symbol was over-stated by a factor of ~5.5× due to **two compounding issues**: (a) conflation of a Hartley level count $\log_2(2\pi/\sigma_*^2)$ with a Shannon mutual-information capacity (Hartley is a cardinality bound, Shannon is the achievable rate); (b) dimensionally, the denominator of the level count should be $\sigma_*$ (linear width, rad), not $\sigma_*^2$ (variance, rad²). Both errors push the figure upward; see `research/oq_p1_capacity_v0.md` §3, §6.
 
-**Comparison to Shannon-Hartley**:
-- Shannon-Hartley AWGN: $C = \frac{1}{2} \log_2(1 + S/N)$ bits/use
-- P1 σ\*-channel at σ\*: $C_{\sigma_*} \approx 0.40$ bits/symbol (≈ ½-bit threshold)
-- ~2x density-advantage claim is **REJECTED**: at the σ\* operating point, P1 capacity is below moderate-SNR AWGN. The phase-coding density advantage holds only in the σ ≪ σ\* (low-noise) regime.
+**Comparison to Shannon-Hartley (gauge-conditioned, v0.3)**:
 
-**Honest Shannon-theoretic interpretation of σ\***: σ\* is the noise level at which the wrapped-Gaussian phase channel's capacity drops below ≈ ½ bit/symbol. This is consistent with the "half-amplitude $E[\cos Z] = 1/2$" framing (both quantify the same physical boundary, "channel half dies", from different angles) and gives a **quantitative information-theoretic anchor** to the σ\* gauge stage S4 of the 5-stage ln 2 chain.
+The AWGN comparison formula $C_{\mathrm{AWGN}}(\sigma; S) = \frac{1}{2} \log_2(1 + S/\sigma^2)$ **is undetermined without specifying the input signal power $S$**. Two physically natural gauges give opposite verdicts (`research/oq_p1_noise_sweep_v0.md`):
+
+| Gauge | $S$ | Physical setup | Low-σ asymptotic gap $C_{P1} - C_{\mathrm{AWGN}}$ | Crossover $\sigma_x$ |
+|---|---|---|---|---|
+| **W₁ unit-amplitude carrier** | $1$ | phase-modulated unit-amplitude carrier (phase modulation + receiver-side phase noise σ rad ↔ amplitude noise σ) | $+\frac{1}{2} \log_2(2\pi/e) \approx +0.604$ bits | $\sigma_x \approx 1.193 \approx 1.014\,\sigma_*$ |
+| **W₂ equal second moment** | $\pi^2/3$ | equal-moment setup matching AWGN input variance with uniform-on-circle (variance $\pi^2/3$) | $+\frac{1}{2} \log_2(6/(e\pi)) \approx -0.254$ bits | none in swept range $[0.05, 3.0]$ |
+
+**Claim 4.2 (gauge-conditioned phase-AWGN Pareto)**: under **W₁ gauge**, the P1 σ\* phase channel has an AWGN density advantage for σ < σ_x ≈ 1.014 σ\*, then is overtaken by AWGN near σ_x. Under **W₂ gauge**, AWGN dominates over the entire swept range and the phase advantage vanishes. "Whether the phase channel beats AWGN" is not a gauge-free question; it becomes a closed-form **gauge-conditioned transition law** only after fixing the comparison gauge $W$ (advantage / crossover / asymptotic gap are determined as functions of $W$). The invariant is not "phase wins" but the **transition law itself**.
+
+**Claim 4.3 (W₁ Pareto boundary 3-constant structure, v0.3.1 R1 reframing)**: the W₁-gauge Pareto boundary is characterised by **3 distinguishable constants** (`research/oq_p1_pareto_g1_v0.md`):
+
+| Constant | Origin | Closed form | Numerical | Role |
+|---|---|---|---|---|
+| **σ_0** | low-σ approx (no wrapping) crossover | $\sqrt{2\pi/e − 1}$ | $1.14519$ | **exact low-noise Pareto boundary** (candidate_v0, bridge constants {2π, e, −1}) |
+| **σ_x** | full wrapped-Gaussian crossover (K=1 single-wrap saturated) | none known | $1.19305$ | **numerical full Pareto boundary** |
+| **σ\*** | half-amplitude $E[\cos Z] = 1/2$ ($q = 1/2$) | $\sqrt{2 \ln 2}$ | $1.17741$ | **interior near-marker** at 67%-along [σ_0, σ_x] |
+
+The 3 constants are **mutually distinct**: σ_0 < σ\* < σ_x with relative spacing $(\sigma_* - \sigma_0)/(\sigma_x - \sigma_0) \approx 0.671$. On the q-axis as well, $q_x = 0.4908 \neq q_* = 0.5$ (1.84% off). **The strict identity σ\* = σ_x (claimed in v0.3 morning) was REJECTED by the G1 test** — the wrapping-correction trajectory ($K = 0, 1, 2, \ldots, \infty$) does not pass through σ\* but settles at σ_x; the 1.33% gap does not close even at the numerical floor (10⁻⁷).
+
+**σ_0 closed-form derivation**: setting $C_{P1}^{\mathrm{low}\text{-}\sigma}(\sigma) = \tfrac12 \log_2(2\pi/(e\sigma^2))$ equal to $C_{\mathrm{AWGN}}(\sigma; 1) = \tfrac12 \log_2(1 + 1/\sigma^2)$ gives $\sigma_0^2 = 2\pi/e - 1$. The combination $2\pi/e$ also appears as the **gap-zero gauge** $S = 2\pi/e$ (the midpoint of the W₁/W₂ canonical pair, where the low-σ asymptotic gap = 0) — σ_0 lives on the σ-axis Pareto, $S = 2\pi/e$ on the S-axis neutral gauge, in **σ ↔ S duality**. The bridge constants $\{2\pi, e\}$ **simultaneously pin** the 3 canonical gauges $\{W_1, W_0, W_2\}$ and the σ-axis Pareto.
+
+**σ_x single-wrap saturation**: σ_x^(K=1) = σ_x^(K=2) agree to $9 \cdot 10^{-8}$, saturated for $K \geq 1$ in real-space wrap count. Wrapping correction **completes within a single wrap** — K≥2 corrections fall below the numerical floor, a structural "first-wrap-dominant" property (this paper's secondary structural finding).
+
+**~2x density-advantage claim**: the v0 claim is REJECTED, finalised in v0.2 (`research/oq_p1_capacity_v0.md`). v0.3 morning refined to the W₁/W₂ gauge-split closed-form expression. **v0.3.1 evening rejects the v0.3-morning claim "σ\* = Pareto boundary within 1.4%" as a strict identity, and reframes σ_0 = √(2π/e − 1) as the new candidate primary** (R1 reframing, `research/oq_p1_pareto_g1_v0.md §4-§6`).
+
+**Honest Shannon-theoretic interpretation of σ\* (v0.3.1, 2-reading + interior-marker)**: σ\* has **2 ESTABLISHED readings** — (i) the noise level at which the wrapped-Gaussian phase channel's capacity drops below ≈ ½ bit/symbol, and (ii) the "half-amplitude $E[\cos Z] = 1/2$" gauge threshold (q = 1/2 exact) — and is additionally positioned as (iii') the **interior near-marker (67%-along)** of the Pareto segment [σ_0, σ_x]. **(iii) "σ\* = Pareto boundary" was proposed in v0.3 morning as a strict identity → REJECTED in v0.3.1 evening on the same day** (G1 test 1.33% gap robust). The σ\* primary residence (S4 ESTABLISHED, Atlas A `sheet_A_amplitude/sigma_star.md`) is unchanged; only reading (iii') interior-marker is added in this §4.2.
 
 ### 4.3 EEG empirical verification + framework anchor
 
@@ -242,7 +264,159 @@ where $h(\mathrm{WG}(\sigma))$ is the differential entropy of the wrapped Gaussi
 
 ### 4.4 Status
 
-**P1 status**: candidate_v0.2_corrected (honest Shannon capacity ≈ 0.40 bits/symbol established by M1 + M2 cross-check; EEG operation confirmed; framework concept of "phase-noise-bounded channel" preserved). OQ-P1-Capacity → CANDIDATE_RESOLVED_NEGATIVE_PUBLISHED (`research/oq_p1_capacity_v0.md` 2026-04-28); v0 2.18 bits/symbol claim retracted, replaced with 0.40 bits/symbol.
+**P1 status**: candidate_v0.3.1 (honest Shannon capacity ≈ 0.40 bits/symbol established by M1+M2 cross-check + AWGN comparison gauge-conditioned (W₁/W₂/W₀ 3-gauge canonical scaffold) + W₁ Pareto boundary R1 reframed into a **3-constant structure**: σ_0 = √(2π/e − 1) closed-form low-noise Pareto candidate_v0 / σ_x ≈ 1.1931 numerical full (K=1 single-wrap saturated) / σ\* interior near-marker 67%-along; EEG operation confirmed; framework concept ("phase-noise-bounded channel") preserved).
+
+- **OQ-P1-Capacity** → CANDIDATE_RESOLVED_NEGATIVE_PUBLISHED (`research/oq_p1_capacity_v0.md` 2026-04-28); v0 2.18 bits/symbol claim retracted, replaced with 0.40 bits/symbol
+- **OQ-P1-NoiseSweep** → CANDIDATE_v0 (`research/oq_p1_noise_sweep_v0.md` 2026-04-30 morning); §4.2 W₁/W₂ gauge-conditioning + bridge constant candidate spawn
+- ~~OQ-P1-Pareto-σ\*-identity~~ → **CLOSED 2026-04-30 evening** (`research/oq_p1_pareto_g1_v0.md`): G1 strict identity σ_x = σ\* REJECTED (1.33% gap robust under K-refinement); G1b σ_0 = √(2π/e − 1) closed-form derivation PASS replaces it (R1 reframing)
+- **OQ-P1-σ_0-second-instance** (spawn, MEDIUM): verify the "framework constant = closed-form Pareto boundary under canonical gauge" pattern in another channel pair (ln 2 / BSC threshold, π / circular channel boundary, e / codebook density boundary candidates) — G2 for σ_0 candidate ESTABLISHED promotion
+- **OQ-P1-σ_0-S15-passage** → **CLOSED 2026-04-30 late dusk** (G3 PASS strong, `research/oq_p1_s0_g3_v0.md`): 3-layer trichotomy residence + sign-flip transcendental Arrow regime boundary (no new Arrow direction needed). S_0 ESTABLISHED via 3 gates (G1 + G2 + G3)
+- **OQ-P1-third-gauge** (spawn, LOW): test W₀ gap-zero gauge $S = 2\pi/e \approx 2.311$ alongside other canonical gauges (input differential entropy match / range bound) — completeness of 3-gauge canonical scaffold $\{W_1, W_0, W_2\}$
+
+#### 4.4.1 Direction-axis tagging (P1 3-constant + S_0 + σ_flip)
+
+Under the A/B observation direction axis of `user_observation_direction_axis` (ESTABLISHED 2026-05-01), each constant in the P1 Pareto landscape is classified as follows (`feedback_cross_direction_identity_screen` 5-step operational order, step 1):
+
+| Quantity | Direction | Observation mode | Closed-form status | Match |
+|---|---|---|---|---|
+| **σ_0 = √(2π/e − 1)** | **B-native** | wrapped-Gaussian K-sum dominated by K=0 continuous Gaussian only as σ→0; projection from infinite ensemble onto finite Pareto crossover | clean closed-form (bridge constants {2π, e, −1}) | ✓ |
+| **σ_x ≈ 1.1931 (K=1 saturated)** | **A-native** | finite K=1 wrap completes the full correction (K=1 vs K=2 agree to 9·10⁻⁸); native to the finite-wrap-count regime | no closed form on any of 4 natural axes (σ raw / σ² / 1/I_F / η = ∫√I_F ds) | ✓ |
+| **σ\* = √(2 ln 2)** | **B-native** | Shannon entropy ½-bit threshold (continuous-ensemble entropy reading) + half-amplitude $E[\cos Z] = 1/2$ char-fcn-inversion reading | clean closed-form (S4 residence) | ✓ |
+| **σ_flip = 2.39576** | **A/B transition** | Information-layer ZERO of Arrow-mechanism competition: at low σ Arrow 2 (B, $\log_2 2$ dimension-doubling) dominates / at high σ Arrow 1 (A, S¹ wrapping in C_phase decay) dominates | transcendental, no closed-form within 0.5% | ✓ |
+| **S_0 = 2π/e** | **A/B bridge ratio** | **canonical bridge ratio** between Arrow 1 (2π period, A-side) and Arrow 3 (e argmax, B-side) (period × argmax role-match) | exact (the 4th bridge-constant origination principle, ESTABLISHED via 3 gates) | ✓ |
+
+**Pre-test prediction recoverable**: the strict identity between σ\* (B) and σ_x (A) was **predictable as REJECTED before running the G1 test, on direction mismatch alone** (the 1.33% gap is a K=1-saturated cross-direction near-coincidence with no bridge operator). This serves as the **upstream screening rule** above `feedback_near_coincidence_check` rule 5 (multi-axis re-measure) — reference instance #1 of the 6/6 forward test PASS for `feedback_cross_direction_identity_screen` ESTABLISHED 2026-05-01.
+
+**Cross-paper application**: when making identity claims within the P1 framework of this paper §4, always check the direction tags of the relevant constants; if cross-direction with no bridge operator, reroute strict identity into near-coincidence + bridge candidate. This operational discipline is parallel to Q1 §1.4.
+
+**Audit reference**: `project_graveyard_audit_complete_2026_05_01` (Tier 1 σ_x case + Tier 2 #9 κ(2) case); `project_p1_noise_sweep_pareto_2026_04_30` (S_0 ESTABLISHED 3-gate).
+
+### 4.5 Discrete dual marginal extension via spectral lift (v0.4 add 2026-04-30 late dusk)
+
+§4.2-§4.4 established the P1 σ\*-channel and the W₁ Pareto in the **continuous σ-axis structure**. Real communication signals are discrete (digital symbol streams / I/Q samples / OFDM subcarriers / spread-spectrum chips); this §4.5 positions P1 as an **extension to the discrete domain**.
+
+#### 4.5.1 Motivation: two routes to discrete dual marginal
+
+There are two principled routes to construct a **dual marginal channel** (phase + amplitude 2-axis) for discrete signals (`c_arrow_bridge_constants.md §13.7`):
+
+| Route | Construction | Scope |
+|---|---|---|
+| **(A) Native discrete dual** | direct $A(X)$ + $B(X)$ pair on symbol space (weight + character / Frobenius–Schur $\nu(\rho)$ decomposition / syndrome view) | BSC / BEC / syndrome decoding / pure combinatorial channels |
+| **(B) Spectral lifted dual** | τ-window + FFT lift to complex spectrum; $(r_\omega, \theta_\omega)$ as dual marginal, $\Phi(\omega, t)$ as winding obstruction | **this paper's default** — I/Q samples / symbol streams (time series) / phase-coded sequences / OFDM subcarriers / spread spectrum / all instances of cross-domain Φ family |
+
+**Claim 4.5.1 (this paper's default = Route B)**: in communication theory, when constructing a dual marginal in the discrete domain, this paper's default is (B) spectral lifted; (A) native discrete is scope-limited (BSC / BEC / syndrome / pure combinatorial). Reasoning:
+- The existing cross-domain 8-domain Φ universality study (`project_fft_rtheta_phi_2026_04_26`) is **entirely (B)-based** — prime gaps / periodic table / graph Laplacian / EEG α / FX / crystal phonon DOS / 2D image (raster) / NT residue
+- The §13.5 dual marginal capacity excess (continuous AWGN regime) cited in §4.2 is the **continuous instance** of (B)
+- Engineering-wise, I/Q sampling + FFT (τ + complex lift) is **standard practice** in OFDM / coherent receivers; Route B is just the formal name for what's already implemented
+
+#### 4.5.2 Spectral lifted dual pipeline (§13.7 4-step lift)
+
+```
+discrete x_t (I/Q sample / symbol stream / FFT subcarrier sequence)
+  ↓ τ-window / delay embedding              (gauge: scanner = window length τ)
+  ↓ FFT                                      (complex lift X̂(ω) ∈ ℂ)
+  ↓ r_ω = |X̂(ω)|, θ_ω = arg X̂(ω)          (dual marginal projection)
+  ↓ Φ(ω, t) = winding / phase trajectory    (obstruction descriptor)
+```
+
+ΣΦ symbol mapping:
+
+| Step | ΣΦ role |
+|---|---|
+| **τ** | structure / mode side gauge (window length, delay, scanner) |
+| **FFT** | complex lift ℝ → ℂ (axis-2 Fi/I bridge realisation on the signal) |
+| **(r, θ)** | dual marginal axes (capacities $C_r$, $C_\theta$) |
+| **Φ** | phase trajectory obstruction / winding / instantaneous frequency descriptor |
+
+**§4.2 continuous instance ↔ §4.5 discrete instance**: §4.2's W₁ Pareto is the continuous AWGN setup with **carrier amplitude 1 + Gaussian phase noise σ rad**. This §4.5 is the structure of **lifting a discrete sample sequence via τ + FFT to the same (r, θ) dual marginal**; the two are two instances of the same pipeline (`c_arrow_bridge_constants.md §13.7.1`):
+
+| Instance | Origin | r-axis | θ-axis | Φ-descriptor |
+|---|---|---|---|---|
+| **continuous (§4.2 P1 channel)** | analytic carrier $z = e^{i\theta}$ + AWGN | amplitude $C_{\mathrm{amp}}$ | phase $C_{\mathrm{phase}}$ | (joint complex retention) |
+| **discrete (§4.5)** | discrete sequence + τ + FFT | $\|X̂(\omega)\|$ envelope | $\arg X̂(\omega)$ phase spectrum | Phi_total / Phi_std_inst_f / Phi_max_jump (cross-domain 8-domain rank study) |
+
+#### 4.5.3 First explicit measurement — prime gap WIN=4096 anchor
+
+`research/oq_p1_s0_nt_spectral_lift_v0.md` (2026-04-30 late dusk) provides the **first explicit application + numerical precision floor audit** of this §4.5.
+
+**Part A — precision floor (synthetic clean sin, known winding fraction)**:
+
+| $N$ | Φ_total expected | Φ_total observed (float64) | matching digits |
+|---|---|---|---|
+| 1024 | 102 | 102.0000000000 | **14.78** |
+| 16384 | 1638 | 1638.0000000000 | **13.93** |
+| 131072 | 13107 | 13106.9999999998 | **13.73** |
+
+Float64 nominal precision is ~15.65 decimal digits ($\varepsilon_{\text{machine}} = 2.22 \times 10^{-16}$). **The pipeline retains ≥ 13 digit floor at $N$ up to $1.3 \times 10^5$** → §13.7 pipeline is numerically safe for long-N integration (numerical foundation for GPS carrier tracking / VLBI correlation / atomic clock distribution). mpmath-50dps cross-check at $N \in \{128, 256, 512\}$ exact match.
+
+**Part B — prime gap WIN=4096 (16× over WIN=256 baseline of 8-domain study)**:
+
+| Descriptor | Sub-class | $\|\Delta_{\text{norm}}\|$ | Univariate AUC (real vs. shuffle) |
+|---|---|---|---|
+| **Phi_total** | cumulative | **2.03 σ** | **0.9255** |
+| Phi_std_inst_f | coherence | 1.22 σ | 0.8056 |
+| Phi_max_jump | coherence | 0.06 σ | 0.5280 |
+
+WIN=256 baseline (`project_fft_rtheta_phi_2026_04_26.md` line 56, 8-domain study NT entry, Phi_total alone ~0.55 univariate AUC) → **at WIN=4096 it is 0.93** = substantial separation gain at 16× window length. The 8-domain Phi_total dominance for prime gaps reproduces and amplifies under the §13.7 explicit frame. The `c_arrow_bridge_constants.md §9.4` sub-class refinement (cumulative-type Phi_total trustworthy in well-conditioned periodic/structured regimes / coherence-type Phi_std_inst_f honest secondary) remains stable at WIN=4096.
+
+#### 4.5.4 Three receiver-choice regimes + Δ_dual richness gain
+
+In addition to σ_0 / σ_x established in §4.2, **σ_flip = Δ_dual sign-flip σ ≈ 2.396 (transcendental, mpmath 50dps bisection)** is now established in `c_arrow_bridge_constants.md §13.6` (G3 PASS strong 2026-04-30 late dusk), completing a 3 σ-threshold receiver-choice regime decision table:
+
+| Threshold | Closed form / numeric | Value | SNR (dB) | Origin |
+|---|---|---|---|---|
+| **σ_0** | $\sqrt{2\pi/e - 1}$ | 1.14519 | −1.18 | §4.2 G1 closed-form low-σ Pareto anchor |
+| **σ_x** | numerical (no closed form) | 1.19305 | −1.53 | §4.2 G1 full W₁ Pareto crossover (C_phase = C_amp) |
+| **σ_flip** | transcendental (G3 50dps) | 2.39576 | −7.59 | §13.6 G3 Δ_dual = 0 Arrow regime boundary |
+
+**Δ_dual asymptote** (§13.5 G2 PASS strong, dual marginal reconstruction excess):
+$$\Delta_{\mathrm{dual}}(\sigma \to 0) = C_{\mathrm{phase}} + C_{\mathrm{amp}} - C_{\mathrm{complex}} \to \tfrac{1}{2}\log_2(8\pi/e) \approx 1.604 \text{ bit/symbol}$$
+
+Decomposition (clean two-piece): Arrow ratio $\frac{1}{2}\log_2 S_0 \approx 0.604$ bit + Arrow 2 dimension-doubling $\log_2 2 = 1$ bit. **At low σ, two marginal receivers exceed a joint complex receiver by Δ_dual > 0 — a richness-of-observation gain.**
+
+3 receiver-choice regimes:
+
+| Regime | σ range | SNR (dB) | Decision | Hardware |
+|---|---|---|---|---|
+| **I** (high SNR) | $\sigma < \sigma_x \approx 1.19$ | $> -1.5$ | phase-only receiver wins single-axis (+0.6 bit/sym vs amp-only at low σ) | PLL / coherent phase demod (CPM / MSK / GMSK / optical phase coherent) |
+| **II** (moderate) | $\sigma_x < \sigma < \sigma_{\mathrm{flip}}$ | $-7.6$ to $-1.5$ | marginal sum (split phase + amp receivers) > joint complex by $\Delta_{\mathrm{dual}} > 0$ | dual-receiver / split phase + envelope detector |
+| **III** (low SNR) | $\sigma > \sigma_{\mathrm{flip}} \approx 2.40$ | $< -7.6$ | joint complex (full I/Q) wins; marginal phase destroyed by S¹ wrapping | joint coherent I/Q (deep-space DSN / GPS carrier tracking / low-rate CDMA) |
+
+**Claim 4.5.2 (sign-flip = Arrow regime boundary, NOT new Arrow direction)**: the Δ_dual sign-flip at σ_flip is an **Information-layer Arrow 1 (S¹ wrapping in C_phase high-σ decay) vs Arrow 2 (log dimension-doubling) regime boundary**. It is not a new Arrow direction; rather, within the existing Arrow 1-3 framework, it is the **transcendental zero of Arrow competition inside an Information observable**. No S15 trichotomy extension is needed; instead the **4th organising principle "Arrow ratio (Arrow $i$ / Arrow $j$)"** is ESTABLISHED with $S_0 = 2\pi/e$ as prototype (§13.6 G3 + §13.7.6).
+
+#### 4.5.5 Engineering use cases (forward to §10.5 RESOLVED v0)
+
+The 3 σ-thresholds + Δ_dual richness gain + Φ pipeline applied to 7 communication engineering use cases form a sweet-spot map (`research/oq_practical_tradeoff_v0.md`; the v0 resolution of OQ-Practical-Tradeoff-Quantification, §10.5):
+
+| Use case | Regime | Φ pipeline role |
+|---|---|---|
+| WiFi / LTE OFDM downlink | I (high SNR) | Phi_std_inst_f as zero-cost subcarrier health monitor (FFT already running) → adaptive modulation |
+| GPS L-band carrier tracking | III (very low SNR) | Phi_total = literal carrier-cycle counter; **§4.5.3 Part A precision floor is the numerical foundation for 10⁵-cycle integration** |
+| Optical coherent comm | I | phase-only +0.6 bit/sym advantage + Phi_std_inst_f detects laser linewidth drift |
+| Deep-space DSN | III | joint coherent forced (Δ_dual < 0); Phi_total = Doppler-tracking by-product |
+| Spread spectrum / CDMA | II→III | **Phi_std_inst_f detects multipath fade onset** = "conditional orthogonality" backup channel surface (analogue of EEG S005 +0.047 AUC rescue) |
+| **Cognitive radio / spectrum monitor** | all 3 | **direct hit** — Phi_std_inst_f H = 0.13 (EEG anchor) honest occupancy detector + Phi_max_jump jamming detector + cumulative-type Phi_total avoided in noise-only context (§9.4 sub-class) |
+| Modulation classification | I→II | Φ family AUC 0.93 (this §4.5.3 prime gap anchor) cross-domain universal |
+
+For the full 7-use-case + 3-regime decision tree + capacity curve plot, see `research/oq_practical_tradeoff_v0.{md,png,json}`. **This is the v0 resolution source of OQ-Practical-Tradeoff-Quantification (§10.5 spawn 2026-04-27)**.
+
+#### 4.5.6 Status
+
+**§4.5 status**: ESTABLISHED v0 (2026-04-30 late dusk +2). All ingredients ESTABLISHED:
+
+- §4.2 W₁ Pareto + σ_0 closed-form (continuous instance)
+- `c_arrow_bridge_constants.md §13.5` G2 PASS strong (dual marginal reconstruction excess)
+- `c_arrow_bridge_constants.md §13.6` G3 PASS strong (σ_flip Arrow regime boundary)
+- `c_arrow_bridge_constants.md §13.7` (spectral lifted dual pipeline + Two-routes formalisation)
+- `c_arrow_bridge_constants.md §13.7.5` (first measurement empirical anchor: precision floor + prime gap AUC 0.93)
+- §10.5 OQ-Practical-Tradeoff-Quantification RESOLVED v0 (engineering 7 use case map)
+
+**Spawned by this §4.5 (v1 follow-ups)**:
+- **OQ-P1-MIMO-CSI-scaling** (MEDIUM, spawn 2026-04-30): extension of the 3 σ-thresholds to MIMO channels per-antenna $\sigma_i$ — σ_flip,N for N×N MIMO is expected to be N-dependent
+- **OQ-P1-Fade-Time-Series** (MEDIUM, spawn 2026-04-30): relationship between σ_eff(t) time-series and Phi_std_inst_f rate-of-change in fading channels (CDMA fade onset detector quantification)
+- **OQ-P1-BER-3-Receiver** (LOW, spawn 2026-04-30): actual BER simulation for M-PSK / M-PAM / M-QAM constellations across the 3 regimes — bridge between closed-form mutual-info bound and hard BER numbers
+
+**Reference**: All §4.5 content has dictionary residence at `c_arrow_bridge_constants.md §13.5 / §13.6 / §13.7` (3 sub-sections); OQ resolution at `research/oq_p1_s0_g3_v0` (G3) + `research/oq_p1_dual_marginal_v0` (G2) + `research/oq_p1_s0_nt_spectral_lift_v0` (precision floor + first measurement) + `research/oq_practical_tradeoff_v0` (engineering map).
 
 ---
 
@@ -303,6 +477,26 @@ where $h(\mathrm{WG}(\sigma))$ is the differential entropy of the wrapped Gaussi
 
 **Claim 6.1 (qutrit advantage)**: qutrit codebook gives **~5.5% Hartley density advantage** over qubit (~0.366 vs. 0.347 nat/dim); equivalent to quart ($d = 4$) (no codebook-dim doubling effect).
 
+**Scope marker (rule 5 recursive audit, 2026-04-30 late dusk +3, `research/oq_s17_recursive_audit_v0`)**: Claim 6.1's "5.5% advantage" holds **specifically for the Hartley density metric**. Below is the axis-conditioned breakdown:
+
+| Axis | qutrit (n=3) vs. binary (n=2) | argmax_n integer |
+|---|---|---|
+| Hartley density $\log(n)/n$ (Arrow 3 canonical) | **+5.66%** (this Claim) | 3 |
+| PAM avg energy efficiency $12 \log(n)/(n^2-1)$ | **−40.56%** (binary wins) | 2 |
+| PAM peak power $2 \log(n)/(n-1)$ | **−20.75%** (binary wins) | 2 |
+| Constant-energy PSK $\log(n)$ | +58.50% | 10 (range edge) |
+| n-PSK MI in AWGN @ 10 dB | +58.43% | 10 |
+| n-PAM MI in AWGN @ 10 dB | +45.54% | 10 |
+| $\log(n)/H_n$ harmonic-cost | +29.68% | 10 |
+
+**Scope of P3 5.5% claim** (further tightened by SNR sweep extension late dusk +5):
+- ✓ **Hartley density specifically** (cardinality-only counting, no per-symbol cost, no noise): 5.5% qutrit advantage holds, argmax_n = 3 = ⌊e⌉
+- ✗ **PAM (amplitude modulation, energy-cost-weighted)**: argmax flips to $n=2$, binary wins by 20-40%
+- ✗ **AWGN-MI metrics even without cost weighting** (`oq_s17_recursive_audit_snr_sweep_v0`, SNR ∈ {−10, +30} dB): n=3 is never argmax — low SNR favours n=2 (noise-robust), high SNR favours range edge
+- ✗ **Bandwidth/energy-constrained channels in general**: optimum depends on cost + SNR model, NOT on Hartley stationarity
+
+→ The "qutrit n=3 = ⌊e⌉ optimum" is the discrete corollary of the Arrow 3 / **noise-free, cost-free** Hartley density stationary point. Claims of "qutrit channel advantage" extending beyond this scope require explicit declaration of the cost model + SNR regime. **Engineering reading**: qutrit is the discrete optimum of pure information-counting density (under the idealisation of no cost and no noise). Real channel design picks different cardinality based on cost structure and SNR regime.
+
 ### 6.2 Practical realisation candidates
 
 | Realisation | Mechanism | Domain |
@@ -322,9 +516,13 @@ where $h(\mathrm{WG}(\sigma))$ is the differential entropy of the wrapped Gaussi
 
 ### 6.4 Status
 
-**P3 status**: ESTABLISHED (S17 codebook argmax = 3 ESTABLISHED 2026-04-23, 5/5 gate, `c_arrow_bridge_constants.md §12.1`). Practical realisation is engineering task; the 5.5% advantage is a **formal information-theoretic mathematical fact**.
+**P3 status**: ESTABLISHED **within Arrow 3 / Hartley density scope** (S17 codebook argmax = 3 ESTABLISHED 2026-04-23, 5/5 gate, `c_arrow_bridge_constants.md §12.1`). **Scope refined 2026-04-30 late dusk +3** (`research/oq_s17_recursive_audit_v0.md`, rule 5 recursive audit 7-axis test): the 5.5% advantage is Hartley density specific; on PAM-energy-weighted axes binary wins (−40.56%). **ESTABLISHED status preserved within scope; advantage holds after axis/gauge fixing.**
 
-**Framework anchor**: P3 is a direct instance of I1 §6 anchor (b) S17; also active as a quantum advantage contribution to quantum communication theory (qutrit-based protocols are info-density-optimal over qubit-based).
+**Framework anchor**: P3 is a direct instance of I1 §6 anchor (b) S17; also active as a quantum advantage contribution to quantum communication theory (qutrit-based protocols are info-density-optimal over qubit-based *within Hartley scope*).
+
+**v0.4 OQ spawned**:
+- **OQ-P3-PAM-Cost-Boundary** (LOW): at what energy-cost-weighting threshold does qutrit overtake binary again — a boundary close to the Hartley axis under light energy weighting (e.g. $\log(n)/n^{0.5}$) where argmax = 3 holds
+- **OQ-P3-Cross-Axis-Universality** (MEDIUM): formal characterisation of the class of axes on which the qutrit advantage holds (constant-cost / Hartley-density-equivalent / etc.)
 
 ---
 
@@ -467,7 +665,9 @@ The I1 §6 5-anchor mathematical info limit theorem + this paper's §3 quantum a
 
 **Observation 10.3.1**: signal theory is "**heavy 0/1/2 scaffold base, overwhelming maturity + bulk-data optimal**", quantum communication theory is "**low loss + cryptographic, research stage**"; the **5 novel proposals are middle ground** — they have framework-derived advantage with implementation cost between signal theory and quantum communication.
 
-**Observation 10.3.2 (framework-internal practical sweet spot, v0.2 corrected)**: among the I-series 5 proposals, **P3 qutrit codebook** is the secure practical sweet spot of "**signal-theory-class lightweight + framework-derived advantage**" (5.5% Hartley density gain ESTABLISHED, S17 5/5 gate). **P1 σ\*-channel has a density advantage only in the σ ≪ σ\* low-noise regime, with no advantage at the σ\* operating point** (`research/oq_p1_capacity_v0.md` 2026-04-28; honest Shannon $C_{\sigma_*} \approx 0.40$ bits/symbol, comparable to moderate-SNR AWGN). P1 is therefore a **conditional secondary** sweet spot, restricted to low-noise regimes.
+**Observation 10.3.2 (framework-internal practical sweet spot, v0.4 axis-conditioned for both P1 + P3)**: among the I-series 5 proposals, **P3 qutrit codebook is a Hartley-scope sweet spot** (5.5% Hartley density gain ESTABLISHED, S17 5/5 gate, **Hartley density / constant-cost-per-symbol scope**, scope refined by `research/oq_s17_recursive_audit_v0` rule 5 audit 2026-04-30 late dusk +3: under PAM-energy-weighting binary wins by ~40%). **P1 σ\*-channel's AWGN advantage is also gauge-conditioned with a 3-constant Pareto boundary structure**. **Both proposals turn into sweet spots only after fixing axis/gauge** — a common pattern confirmed by the rule 5 audit (S17 = Hartley axis fixed / P1 = W₁ gauge fixed). The honest reading of the ΣΦ framework is **axis/gauge-conditioned specific advantage, not unconditional advantage** (`research/oq_p1_noise_sweep_v0.md` 2026-04-30 morning, `research/oq_p1_pareto_g1_v0.md` 2026-04-30 evening R1):
+
+"Whether P1 wins against AWGN" cannot be claimed unconditionally; it becomes a **gauge-conditioned closed-form transition law** only after specifying the comparison gauge. The invariant is neither "phase advantage" nor "σ\* = Pareto boundary"; it is the gauge map $W \to (\Delta_W(0^+), \sigma_0^W$ closed-form low-noise Pareto, $\sigma_x^W$ numerical full Pareto, asymptotic law) itself. The bridge constants $\{2\pi, e\}$ **simultaneously pin** the σ-axis Pareto (σ_0² = 2π/e − 1) and the S-axis neutral gauge ($S = 2\pi/e$), forming a σ ↔ S duality. **v0.4 update (2026-04-30 late dusk +3)**: P3 qutrit "5.5% gain" was likewise refined into Hartley scope by the rule 5 recursive audit; on PAM-energy-weighted axes binary wins. Both proposals share the same conditional pattern of "sweet spot only after axis/gauge fixing" (P1 = W₁ gauge / P3 = Hartley axis).
 
 **Observation 10.3.3 (Layer 3 = heavy implementation trade-off)**: P2 (4-class) + P4 (5-stage converter) are **heavy implementation trade-off** — framework elegance is maximal but quantum-supremacy-class compute cost required; currently highly speculative. **Far-future research direction** in parallel with Q-series Q4-Q6 future (quantum 8-gauge / QFT / quantum gravity).
 
@@ -485,13 +685,34 @@ The I1 §6 5-anchor mathematical info limit theorem + this paper's §3 quantum a
 
 **Framework-internal status**: with 5-anchor mathematical info limit (I1 §6) + implementation trade-off table (this §10) **both lenses combined**, the **dual evaluation framework** for communication paradigms is complete — **2-axis evaluation system** of pure math + engineering reality.
 
-### §10.5 OQ-Practical-Tradeoff-Quantification (this paper's spawn 2026-04-27)
+### §10.5 OQ-Practical-Tradeoff-Quantification (this paper's spawn 2026-04-27 → RESOLVED v0 2026-04-30)
 
 **OQ-Practical-Tradeoff-Quantification (this §10 spawn-off, MEDIUM)**:
 
 **Scope**: this §10 comparison table expresses **qualitative trade-off** (light / heavy / ✓ / ✗ / △ scale). Open as formal task to **quantitative trade-off bounds** — e.g. exact capacity formula proof for P1 σ\*-channel + rigorous AWGN advantage comparison / net advantage of P3 qutrit 5.5% density gain including noise budget / transition fidelity calculation for P4 5-stage converter.
 
-**Status**: OPEN. Per-paradigm quantitative analysis is the **aggregate** of OQ-P1-Capacity (§4.4) + OQ-P2-CrossClass (§5.4) + OQ-P4-Implementation (§7.4) + OQ-P5-Sparsity-Capacity (§8.4).
+**Status**: **RESOLVED v0 (2026-04-30 late dusk)** — resolved in `research/oq_practical_tradeoff_v0.md`. Using today's primitives (G1 σ_0 + G2 dual marginal + G3 σ_flip + §13.7 spectral lifted dual + §13.7.5 precision floor), a comm engineering "sweet spot map" is constructed. **3-σ-threshold receiver-choice regime + 7 use case map + 1.604 bit/sym richness gain quantification** cover the OQ scope.
+
+**Resolution summary**:
+
+| Threshold | Closed form / numeric | Value | SNR (dB) | Engineering meaning |
+|---|---|---|---|---|
+| **σ_0** | $\sqrt{2\pi/e - 1}$ | 1.145 | −1.18 | Phase-only Pareto closed-form anchor (low-σ) |
+| **σ_x** | numerical | 1.193 | −1.53 | Full W₁ Pareto crossover (C_phase = C_amp) |
+| **σ_flip** | transcendental (G3) | 2.396 | −7.59 | Δ_dual = 0 Arrow regime boundary (joint > marginal sum) |
+
+3 receiver-choice regimes:
+- **I (σ < σ_x, SNR > −1.5 dB)**: phase-only wins (+0.6 bit/sym vs. amp-only) → PLL / coherent phase
+- **II (σ_x < σ < σ_flip)**: marginal sum (phase + amp) > joint complex → split receiver competitive
+- **III (σ > σ_flip, SNR < −7.6 dB)**: joint complex forced → joint coherent I/Q
+
+7 use cases mapped: WiFi/LTE OFDM (Regime I, Phi_std_inst_f as zero-cost subcarrier monitor) / GPS L-band (Regime III, Phi_total = literal carrier-cycle counter, Part A precision floor enables) / optical coherent (Regime I) / deep-space DSN (Regime III) / spread spectrum CDMA (Regime II→III transition, Phi as fade-resilience backup) / cognitive radio spectrum monitor (Phi_std_inst_f H = 0.13 honest occupancy) / modulation classification (Φ family AUC 0.93 anchor from prime gap WIN=4096).
+
+Per-paradigm quantitative analysis (OQ-P1-Capacity §4.4 etc.) remains as component sub-OQs of this §10.5, but the aggregate-level "trade-off quantification" is closed at v0.
+
+**Source**: `research/oq_practical_tradeoff_v0.md` + `.py` + `.json` + `.png` (2026-04-30 late dusk +2).
+
+**v1 follow-ups (open)**: MIMO CSI compression scaling (per-antenna $\sigma_i$ extension) / fading channel σ_eff time-series with Phi_std_inst_f rate / actual BER/SER simulation (M-PSK / M-PAM / M-QAM 3 receiver comparison) for hard-numbers reinforcement.
 
 ---
 
@@ -523,6 +744,7 @@ I-series 2-paper minimum cycle achieved + room to extend remains open. **4th fra
 | Open question | Status | I-paper |
 |---|---|---|
 | **OQ-I-Bekenstein-Extension** (Bekenstein + Margolus-Levitin 6th anchor) | OPEN (I1 §6.5 spawn) | I1 §6.5, Q-series Q6 future |
+| **OQ-Practical-Tradeoff-Quantification** (3-σ-threshold + 7 use case map) | **RESOLVED v0 2026-04-30** (`research/oq_practical_tradeoff_v0.md`) | I2 §10.5 |
 | **OQ-P1-Capacity** (formal capacity proof of σ\* phase-channel) | OPEN (this paper's spawn) | I2 §4.4 |
 | **OQ-P2-CrossClass** (4-class cross-class transition costs) | OPEN (this paper's spawn) | I2 §5.4 |
 | **OQ-P4-Implementation** (5-stage converter physical implementation) | OPEN (this paper's spawn) | I2 §7.4 |
@@ -561,6 +783,12 @@ Residence of major framework pieces (reflecting communication-only specialisatio
 
 ## Change log
 
+- **v0.4 (2026-04-30 late dusk +2 → +3 → +5)**: §4.5 NEW Discrete dual marginal extension via spectral lift. This §4.5 positions §4.2-§4.4's continuous σ-axis Pareto as an **extension to the discrete domain**, developed across 6 sub-sections: §4.5.1 motivation + 2-route distinction (native discrete vs. spectral lifted; this paper's default = Route B) / §4.5.2 §13.7 4-step pipeline (τ + FFT + r,θ + Φ) + ΣΦ symbol mapping / §4.5.3 first explicit measurement (precision floor ≥ 13 digit at $N$ up to $1.3 \times 10^5$ + prime gap WIN=4096 Phi_total AUC 0.926, `research/oq_p1_s0_nt_spectral_lift_v0`) / §4.5.4 3 receiver-choice regimes + Δ_dual richness gain (σ_flip = 2.396 G3 transcendental added, `research/oq_p1_s0_g3_v0`; Δ_dual asymptote = ½ log₂(8π/e) ≈ 1.604 bit/sym, `research/oq_p1_dual_marginal_v0`) / §4.5.5 7 use case map (forward to §10.5 RESOLVED v0) / §4.5.6 Status + 3 v1 follow-up OQ spawn (MIMO scaling / fade time-series / actual BER simulation). §10.5 OQ-Practical-Tradeoff-Quantification → **RESOLVED v0** (`research/oq_practical_tradeoff_v0` + `.png` engineering use case map). §11.3 OQ status table 1 row added. §0 Abstract M3 + version meta updated. Dictionary-side ingredients all ESTABLISHED (`c_arrow_bridge_constants.md §13.5 G2 + §13.6 G3 + §13.7 spectral lifted dual + §13.7.5 first measurement empirical anchor`). **Late dusk +3 add (rule 5 recursive audit)**: §6.1 P3 Claim 6.1 + §6.4 P3 status + §10.3 Observation 10.3.2 (P3 "unconditional sweet spot" → "Hartley scope sweet spot" correction) scope-refined by `research/oq_s17_recursive_audit_v0`. S17 ESTABLISHED itself preserved (Arrow 3 / Hartley scope); downstream P3 5.5% advantage claim has **scope marker added** = constant-cost-per-symbol / Hartley density specific; under PAM-energy-weighting binary wins (−40.56%). 2 OQ spawned (OQ-P3-PAM-Cost-Boundary LOW + OQ-P3-Cross-Axis-Universality MEDIUM). Dictionary §5.4.2 audit entry added in parallel. **Late dusk +5 add (SNR sweep extension)**: `oq_s17_recursive_audit_snr_sweep_v0` confirmed across SNR_dB ∈ {−10, +30} that n=3 never emerges as integer argmax on AWGN-MI axes, tightening the P3 scope marker further to **Hartley density specifically** (cardinality-only, no cost, no noise).
+
+- **v0.3.1 (2026-04-30 evening)**: P1 §4.2 G1 test reframing R1 — strict identity σ\* = σ_x REJECTED (1.33% gap a robust real gap, K=1 single-wrap saturated); σ_0 = √(2π/e − 1) closed-form low-noise Pareto boundary PROMOTED to candidate_v0; σ\* interior near-marker (67%-along [σ_0, σ_x]) retained. The 3-gauge canonical scaffold $\{W_1, W_0, W_2\}$ + bridge constants $\{2\pi, e\}$ is the correct closed-form formulation that covers the Pareto landscape. Diagnosed in `research/oq_p1_pareto_g1_v0.md`; 6-spot R1 reframing synced with dictionary `c_arrow_bridge_constants.md §12.4`.
+
+- **v0.3 morning (2026-04-30)**: P1 §4.2 W₁/W₂ gauge-conditioning added — formalises the fact that "whether P1 wins against AWGN" cannot be asked gauge-free; the transition law is closed-form-expressed in the 3-gauge canonical scaffold $\{W_1$ (carrier amplitude 1), $W_0$ (gap-zero $S = 2\pi/e$), $W_2$ (equal second moment)$\}$. σ\* candidate_v0 (Pareto boundary within 1.4%) spawned — REJECTED on the same day in the evening.
+
 - **v0.2 (2026-04-28)**: P1 capacity correction. The v0.1 candidate value of $C_{\sigma_*} \approx 2.18$ bits/symbol has been **retracted and replaced** by $C_{\sigma_*} \approx 0.40$ bits/symbol (M1 closed-form + M2 Blahut-Arimoto cross-check). The compound inflation factor of ≈ 5.5× came from confusing Hartley counting with Shannon mutual information, plus a σ²/σ dimensional error; diagnosed in `research/oq_p1_capacity_v0.md`. Framework / 5 proposals structure preserved; corrections applied to the 6 spots §0 Abstract M3 + §4.2 Claim 4.1 + §4.4 Status + §9.1 anchor (e) row + §11 P1 row + §10.3 Observation 10.3.2 (sweet spot demoted from P1 + P3 to P3 only, with P1 as conditional secondary in the low-noise regime). OQ-P1-Capacity status → CANDIDATE_RESOLVED_NEGATIVE_PUBLISHED. σ\* itself (= √(2 ln 2)) / 5-stage ln 2 chain stage S4 / I1 §6 anchor (e) gauge interpretation / EEG ESTABLISHED are unaffected (those are gauge / coherence statements, not capacity statements). Honest Shannon-theoretic interpretation of σ\* (the noise level at which capacity drops below ½ bit) gives a sharper quantitative anchor to the 5-stage chain S4 stage.
 
 - **v0.1 (2026-04-27)**: initial Information-only draft. I-series final closure paper position (parallel to N5 + Q3). Building on I1 (Information framework header + 5-anchor information capacity theorem), formalises the **3-tier communication theory** (signal theory / quantum communication theory / novel communication theory 5 proposals). The **triple cross-domain anchor** completion via N1-N5 (NT) + Q1-Q3 (quantum) + I1-I2 (information) finally achieves the 3 domain specialisation parallel completion of the Paper D multi-domain v0.9.2 6-domain triangulation in this paper. 4 OQ spawned by this paper (OQ-P1-Capacity / OQ-P2-CrossClass / OQ-P4-Implementation / OQ-P5-Sparsity-Capacity). Announces I-series future I3-I5 + 4th framework header candidate in §10.2.
@@ -589,8 +817,21 @@ Residence of major framework pieces (reflecting communication-only specialisatio
 
 **Main material of novel communication theory 5 proposals**:
 - P1: `transformation_atlas/sheet_A_amplitude/sigma_star.md` (Atlas A, ESTABLISHED 2026-04-09)
+  - **§4.5 spectral lift extension (v0.4 add 2026-04-30 late dusk +2)**:
+    - `c_arrow_bridge_constants.md §13.5` (G2 PASS strong, dual marginal reconstruction excess)
+    - `c_arrow_bridge_constants.md §13.6` (G3 PASS strong, sign-flip Arrow regime boundary)
+    - `c_arrow_bridge_constants.md §13.7` (spectral lifted dual pipeline + Two-routes formalisation)
+    - `c_arrow_bridge_constants.md §13.7.5` (first measurement empirical anchor)
+    - `research/oq_p1_dual_marginal_v0` (G2 mpmath 30-dps, Δ_dual asymptote)
+    - `research/oq_p1_s0_g3_v0` (G3 mpmath 50-dps, σ_flip transcendental)
+    - `research/oq_p1_s0_nt_spectral_lift_v0` (precision floor + prime gap WIN=4096 measurement)
+    - `research/oq_practical_tradeoff_v0` (engineering 7 use case map, §10.5 RESOLVED v0)
 - P2: `c_filtration_obstruction.md §8.5` (4-class refined Hodge, ESTABLISHED 2026-04-23)
 - P3: `c_arrow_bridge_constants.md §12.1` (S17 codebook argmax = 3, ESTABLISHED 2026-04-23 5/5 gate)
+  - **§6.1 / §6.4 scope refinement (v0.4 add 2026-04-30 late dusk +3)**:
+    - `c_arrow_bridge_constants.md §5.4.2` (S17 recursive rule-5 audit, 7 alternative natural axes + SNR sweep extension)
+    - `research/oq_s17_recursive_audit_v0` (7-axis sweep + verdict SCOPE_REFINED)
+    - `research/oq_s17_recursive_audit_snr_sweep_v0` (E/F SNR sweep extension, late dusk +5)
 - P4: `c_arrow_bridge_constants.md §12.2` (5-stage ln 2 chain, ESTABLISHED 2026-04-27)
 - P5: `meta/triangulation_methodology.md §11` (Q1 §6 4-vertex, ESTABLISHED 2026-04-27)
 

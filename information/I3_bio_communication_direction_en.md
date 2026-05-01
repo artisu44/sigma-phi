@@ -39,6 +39,21 @@ User insight (2026-04-27): "**biology may be selecting communication means among
 
 However, this direction paper does **not make full formal claims** — currently 2 ESTABLISHED biological anchors (DNA + EEG); under the framework triangulation discipline (`meta/triangulation_methodology.md §6.1` 3 vertices required), 3+ instance pre-registration is the **promotion condition for structural claims**. This paper is a directional placement as forward task plan.
 
+### §0.1 Direction-axis position (A/B native split of biological anchors)
+
+Under the A/B observation direction axis of `user_observation_direction_axis` (ESTABLISHED 2026-05-01), the two ESTABLISHED biological anchors of this paper are **two anchors of distinct direction-native types** that reproduce the "A + B co-resident" structure of the I framework in a biological context:
+
+| Anchor | Direction | Native | Biological context |
+|---|---|---|---|
+| **DNA codon = 3** (S17 codebook argmax instance) | **A-native** (discrete codebook integer argmax = 3) | Hartley density discrete optimum (integer cardinality count) | Evolutionarily fixed genetic code (~4 billion years) |
+| **EEG σ\* = √(2 ln 2)** (P1 σ\*-channel instance) | **B-native** (continuous Shannon entropy ½-bit threshold) | wrapped-Gaussian phase channel capacity | Real-time brain phase coherence regulation |
+
+**Pattern observation**: the direction split between the two biological anchors is structurally consistent with the Hartley A / Shannon B 1+4 split of the I1 framework — **biology simultaneously deploys discrete (A-side) and continuous (B-side) paradigms at distinct scales** (genetic code vs brain phase). This reinforces the central hypothesis of this paper ("biology independently and naturally selects the I-series 5-paradigm framework") at the direction-axis layer with **2-anchor split as evidence**.
+
+**Direction-tag prediction for 3+ instance pre-registration**: each of the pre-reg candidates listed in §3.2 (LFP / ribosome / etc.) admits an advance prediction by direction tag — neural oscillations are B-side native (candidates for continuous entropy regulation), ribosome codon-reading is A-side native (candidate for discrete codebook), so that if the 3-vertex triangulation is assembled as a direction-axis triangulation (A + B + bridge), the strongest possible framework anchoring is achieved.
+
+**Audit reference**: `project_graveyard_audit_complete_2026_05_01` (Tier 0 reflection of the direction axis); I1 §1.4 (Hartley A / Shannon B 1+4 split).
+
 ---
 
 ## §1 Existing biological anchors (research already done)

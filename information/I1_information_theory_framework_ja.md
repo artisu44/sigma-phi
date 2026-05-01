@@ -86,6 +86,41 @@ Q1 §1.3 + Q2 §1.4 + Q3 §1.3 "gauge" 3 用法 (gauge¹/gauge²/gauge³) を継
 - **5-strand info-theory taxonomy** (`c_information_theory.md §0`): Shannon channel / Rate-Distortion / Information Bottleneck / Fisher Geometry / Algorithmic complexity の 5 strand internal sub-taxonomy
 - **Triple framework anchor**: I1 ↔ N1 ↔ Q1 = NT / 量子 / 情報 3 framework header の cross-domain validation
 
+### 1.4 Direction-axis position (Information framework は Hartley/Shannon split = A/B native co-residence)
+
+`user_observation_direction_axis` (ESTABLISHED 2026-05-01) の A/B observation direction axis において、本論 Information framework は **A-native と B-native が co-resident** な特殊位置を持つ (N1 = A-primary native, Q1 = B-primary native と異なり、Information は両側 anchor)。
+
+**Hartley vs Shannon split** (`feedback_capacity_hartley_vs_shannon` ESTABLISHED と整合):
+
+| Anchor (5-anchor 1-5) | Direction | 観測モード | Native instance |
+|---|---|---|---|
+| **(a) Hartley $H \leq \log d$** | **A-native** | 有限 cardinality count → 上界 extrapolation | finite alphabet $|\mathcal{X}| = d$ Arrow 3 cardinality bound |
+| **(b) S17 info density $H/d \leq 1/e$** | **B-native** | continuous extremum at $d^* = e$、無限 distribution → optimum projection | Hartley density continuous regime + qutrit discrete codebook argmax |
+| **(c) 5-stage ln 2 chain (Born / vN / FDT / Landauer / σ\*)** | **B-native (Shannon-line)** | continuous ensemble entropy / thermal limit / phase channel = 全 B-direction native | S13 ln 2 fixed point chain |
+| **(d) T-AAS 4-class $-\log_2 F_C$** | **B-native** | resource-theoretic infinite class → finite per-class monotone projection | 4-class infidelity unified base |
+| **(e) σ\* = √(2 ln 2) phase gauge** | **B-native** | continuous ensemble Shannon entropy ½-bit threshold | I2 §4 P1 σ\*-channel |
+
+**Key observation**: 5-anchor のうち (a) Hartley **だけが A-native**、(b)-(e) は全 B-native。これは Information framework が **Hartley A-anchor を 1 本立てて、残り 4 anchor で B-side を多重 anchor する asymmetric structure** を持つことを意味する。`feedback_capacity_hartley_vs_shannon` の "Hartley ≠ Shannon, dimensional units in log(), 比較 gauge $S$ 明示" 3-rule は **direction-axis 上位 rationale** で説明可能 — Hartley と Shannon は同じ "情報量" 言語を共有するが ontologically 逆方向の観測モードであり、混同すると capacity claim で direction mismatch を起こす。
+
+**Cross-direction bridge instances** (本論 §6 5-anchor theorem 内に潜在):
+- **S_0 = 2π/e** (`c_arrow_bridge_constants §13` ESTABLISHED): Arrow 1 (2π period A-side) / Arrow 3 (e argmax B-side) の **canonical bridge ratio**、anchor (a) と (b) を 1 ratio で connect — Hartley density (B-side) の continuous extremum $d^* = e$ と Arrow 1 period $2\pi$ の bridge が 5-anchor structure の **internal coherence anchor**
+- **σ_0 = √(2π/e − 1)** (`research/oq_p1_pareto_g1_v0.md`): I2 §4 §4.4.1 で B-native Pareto boundary、closed-form bridge constants $\{2\pi, e, -1\}$ で σ-axis と S-axis 双対を pin
+- **ln 2 / log_2 base** (anchor c): Arrow 2 involution = both A-side (level-fixed half-value count) と B-side (continuous integral $\int dx/x$ at $x=2$) で 同時 instanciation 可能、bridge 候補
+
+**N1 / Q1 / I1 framework triple direction-axis position**:
+
+| Header | Native primary | Native secondary | Bridge constants prominent |
+|---|---|---|---|
+| **N1 (NT)** | A | (B via class number formula bridge) | π (S14), ln 2 (S13), $h = \lim(s-1)L$ (rank-0 bridge) |
+| **Q1 (Quantum)** | B | (A via observation outcome) | σ\* (S4), Born rule (B-projection) |
+| **I1 (Information)** | **A + B co-resident** (Hartley A / Shannon B 1+4 split) | — | **S_0 = 2π/e (anchor a × b bridge)**, S13 ln 2 (anchor c), σ\* (anchor e) |
+
+I1 の co-resident structure は Information framework が NT-Quantum bridge の **operational language layer** として機能する根拠 — Shannon (B-line) で量子 entropies と connect、Hartley (A-line) で combinatorial / cardinality / NT-side と connect、5-anchor theorem で両 side を 1 inequality に統合。
+
+**Screening rule application**: 本論 §6 5-anchor theorem 内で identity claim する際、relevant anchor の direction-tag (a A / b-e B) と bridge constant (S_0 等) を必ず確認。Hartley と Shannon を取り違えて identity 主張する例 (I2 §4.2 v0 inflation 2.18 bits/symbol = 5.5× over-stated, OQ-P1-Capacity CANDIDATE_RESOLVED_NEGATIVE) は direction-mismatch instance、`feedback_cross_direction_identity_screen` operational discipline を本論 framework で運用する canonical 反面教師。
+
+**Audit reference**: `project_graveyard_audit_complete_2026_05_01`、`feedback_capacity_hartley_vs_shannon` (上位 rationale 関係)。
+
 ---
 
 ## §2 観測理論の公理 + 0/1/2 scaffold formal

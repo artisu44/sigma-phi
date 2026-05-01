@@ -67,6 +67,30 @@ The "ker_gauge" of T-AAS is the **gauge¹** family (quantum: class-stabilising u
 
 **Additional terms (quantum-specific)**: **class-stabilising gauge** = unitary group preserving each algebraic class C (C₁ Clifford / C₂ Gaussian symplectic / C₃ poly-depth circuit / C₄ local unitaries U_A ⊗ U_B) / **class-fidelity F_C** = $F_C(\rho) := \sup_{\sigma \in \overline{C}} F(\rho, \sigma)$, providing the base for the unified monotone $-\log_2 F_C$ in Theorem 4a.1 (§5.3).
 
+### 1.4 Direction-axis position (Q-framework = B-primary native)
+
+Under the A/B observation direction axis of `user_observation_direction_axis` (ESTABLISHED 2026-05-01), this paper's Quantum framework occupies the **B-direction primary native** position:
+
+| Side | Direction | Observation mode | Quantum-side instance |
+|---|---|---|---|
+| additive / discrete / NT | **A (finite → infinite)** | finite observation → outer extrapolation toward infinity | (out of scope; handled by N1 framework) |
+| **multiplicative / continuous / quantum** | **B (infinite → finite)** | **infinite ontology → inner projection onto finite** | **primary domain of this paper** |
+
+**B-direction-native instances on the quantum side**:
+- **Born rule** (§3 Information layer / Q3 forward): projection postulate from infinite-dimensional Hilbert ensemble (state space) onto finite measurement outcomes
+- **Stone unitary group** (§1.3): continuous ι_L lift = continuous parametrisation of an infinite ontology
+- **Spectral theorem** (§2): spectrum decomposition of self-adjoint operators = projection from infinite operator onto finite/discrete spectrum
+- **Non-commutative lift of §4 dual** (§4): unitary representation $\pi: G \to U(H)$ = realisation of an infinite group representation in Hilbert space
+
+**Parallel position with N1 (A-primary) and Q1 (B-primary)**: the closing line of §0 Abstract — "the two parallel framework headers N1 (NT) and Q1 (quantum) jointly verify the domain-independent universality of S15 / T-AAS / the Arrow framework across two mathematical regions" — can be restated in direction-axis terms as a **double anchor at the A-primary native side and the B-primary native side**.
+
+**Cross-direction bridge instances (relevant within this paper)**:
+- **σ\* = √(2 ln 2)** (Q3 Born-Gleason chain): Shannon entropy ½-bit threshold = B-native (continuous ensemble entropy)
+- **S_0 = 2π/e** (`c_arrow_bridge_constants §13` ESTABLISHED): the **canonical bridge ratio** between Arrow 1 (2π period, A-side) and Arrow 3 (e argmax, B-side); connectable to the §4.5 base-of-log gauge
+- **σ_flip = 2.39576** (`project_p1_noise_sweep_pareto_2026_04_30`): Information-layer ZERO of the Arrow-mechanism competition = **A↔B regime boundary**; appears in this paper's §3 Information-layer dual marginal context
+
+**Screening rule application**: `feedback_cross_direction_identity_screen` (ESTABLISHED 2026-05-01) is operated within this paper as an **internal screening rule** — when making an identity claim on the quantum side, always tag whether the relevant quantity is B-native, A-native, or a bridge; if cross-direction with no explicit bridge operator (lim / projection / Hecke / regulator etc.), strict identity must be REJECTED. This is especially required for cross-paper claims with the N1 framework.
+
 ---
 
 ## §2 Axioms of observation theory

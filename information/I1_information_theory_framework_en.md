@@ -87,6 +87,41 @@ Inherits the 3 uses of "gauge" (gauge¹/gauge²/gauge³) from Q1 §1.3 + Q2 §1.
 - **5-strand info-theory taxonomy** (`c_information_theory.md §0`): internal sub-taxonomy across Shannon channel / Rate-Distortion / Information Bottleneck / Fisher Geometry / Algorithmic complexity 5 strands
 - **Triple framework anchor**: I1 ↔ N1 ↔ Q1 = cross-domain validation by the 3 framework headers NT / quantum / information
 
+### 1.4 Direction-axis position (Information framework = A/B native co-residence via Hartley/Shannon split)
+
+Under the A/B observation direction axis of `user_observation_direction_axis` (ESTABLISHED 2026-05-01), this paper's Information framework occupies the special position of **A-native and B-native co-residence** (in contrast to N1 = A-primary, Q1 = B-primary; the I framework anchors both sides).
+
+**Hartley vs Shannon split** (consistent with `feedback_capacity_hartley_vs_shannon` ESTABLISHED):
+
+| Anchor (5-anchor 1-5) | Direction | Observation mode | Native instance |
+|---|---|---|---|
+| **(a) Hartley $H \leq \log d$** | **A-native** | finite cardinality count → upper-bound extrapolation | finite alphabet $|\mathcal{X}| = d$ Arrow 3 cardinality bound |
+| **(b) S17 info density $H/d \leq 1/e$** | **B-native** | continuous extremum at $d^* = e$, infinite distribution → optimum projection | Hartley density continuous regime + qutrit discrete codebook argmax |
+| **(c) 5-stage ln 2 chain (Born / vN / FDT / Landauer / σ\*)** | **B-native (Shannon-line)** | continuous ensemble entropy / thermal limit / phase channel = all B-direction native | S13 ln 2 fixed-point chain |
+| **(d) T-AAS 4-class $-\log_2 F_C$** | **B-native** | resource-theoretic infinite class → finite per-class monotone projection | 4-class infidelity unified base |
+| **(e) σ\* = √(2 ln 2) phase gauge** | **B-native** | continuous ensemble Shannon entropy ½-bit threshold | I2 §4 P1 σ\*-channel |
+
+**Key observation**: among the 5 anchors, **only (a) Hartley is A-native**; (b)-(e) are all B-native. This means the Information framework has an **asymmetric structure: a single A-anchor (Hartley) and four B-anchors that multiply anchor the B-side**. The 3-rule structure of `feedback_capacity_hartley_vs_shannon` ("Hartley ≠ Shannon, dimensional units in log(), make the comparison gauge $S$ explicit") is explained at the **direction-axis upstream rationale** — Hartley and Shannon share the language of "information content" but are ontologically opposite observation modes; conflating them produces direction-mismatch errors in capacity claims.
+
+**Cross-direction bridge instances (latent within §6 5-anchor theorem)**:
+- **S_0 = 2π/e** (`c_arrow_bridge_constants §13` ESTABLISHED): **canonical bridge ratio** between Arrow 1 (2π period, A-side) and Arrow 3 (e argmax, B-side); connects anchors (a) and (b) via a single ratio — the bridge between Hartley density's continuous extremum $d^* = e$ (B-side) and Arrow 1 period $2\pi$ is the **internal coherence anchor** of the 5-anchor structure
+- **σ_0 = √(2π/e − 1)** (`research/oq_p1_pareto_g1_v0.md`): in I2 §4 §4.4.1 a B-native Pareto boundary; closed-form bridge constants $\{2\pi, e, -1\}$ pin both σ-axis and S-axis duals
+- **ln 2 / log_2 base** (anchor c): Arrow 2 involution can be simultaneously instantiated on both A-side (level-fixed half-value count) and B-side (continuous integral $\int dx/x$ at $x=2$); a candidate bridge
+
+**Triple direction-axis position of N1 / Q1 / I1 framework headers**:
+
+| Header | Native primary | Native secondary | Prominent bridge constants |
+|---|---|---|---|
+| **N1 (NT)** | A | (B via class number formula bridge) | π (S14), ln 2 (S13), $h = \lim(s-1)L$ (rank-0 bridge) |
+| **Q1 (Quantum)** | B | (A via observation outcome) | σ\* (S4), Born rule (B-projection) |
+| **I1 (Information)** | **A + B co-resident** (Hartley A / Shannon B 1+4 split) | — | **S_0 = 2π/e (anchor a × b bridge)**, S13 ln 2 (anchor c), σ\* (anchor e) |
+
+The co-resident structure of I1 is the basis on which the Information framework functions as the **operational language layer** of the NT-Quantum bridge — connecting with quantum entropies in Shannon (B-line) and with combinatorial / cardinality / NT-side in Hartley (A-line); the 5-anchor theorem unifies both sides into a single inequality.
+
+**Screening rule application**: when making identity claims within §6 5-anchor theorem, always check the direction tag of the relevant anchor (a A / b-e B) and bridge constants such as S_0. The case of confusing Hartley with Shannon to produce an inflated identity claim (the v0 inflation of 2.18 bits/symbol in I2 §4.2 — over-stated by 5.5×; CANDIDATE_RESOLVED_NEGATIVE for OQ-P1-Capacity) is a direction-mismatch instance that serves as the **canonical cautionary example** for operating the `feedback_cross_direction_identity_screen` discipline within this paper's framework.
+
+**Audit reference**: `project_graveyard_audit_complete_2026_05_01`; `feedback_capacity_hartley_vs_shannon` (upstream rationale relationship).
+
 ---
 
 ## §2 Axioms of observation theory + formal 0/1/2 scaffold

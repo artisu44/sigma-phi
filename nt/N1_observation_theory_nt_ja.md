@@ -62,6 +62,41 @@ Paper D (multi-domain) は FX / 画像 AI / DNA / 結晶 / 量子 等の triangu
 
 T-AAS の "ker_gauge" は **gauge¹** family を指す。gauge² は §6.2 と §8.2 forward reference のみで、本論主構造には介入しない。
 
+### 1.4 Direction-axis position (NT-framework = A-primary native)
+
+`user_observation_direction_axis` (ESTABLISHED 2026-05-01) の A/B observation direction axis において、本論 NT framework は **A-direction primary native** に位置する (Q1 = B-primary, I1 = A+B co-resident と異なる、A-side anchor)。
+
+| Side | Direction | 観測モード | 数論側 instance |
+|---|---|---|---|
+| **加法/離散/NT** | **A (有限→無限)** | **有限観測 → 無限 outer extrapolation** | **本論主領域** |
+| 乗法/連続/量子 | B (無限→有限) | 無限 ontology → 有限 inner projection | (本論 scope 外、Q1 framework が担当) |
+
+**A-direction native 構造の数論側 instance**:
+- **PNT / 素数密度** (§3.2 Scan 層): 有限 N までの素数 count → 漸近 $\pi(N) \sim N/\log N$ extrapolation
+- **Class number formula bridge** (§4.1): rank 0 case で $h_K = \lim_{s\to 1}(s-1)L(s, \chi)$ が **explicit B-direction lift via lim operator** = A-native ($h_K$, 有限 class number) を B-native L 経由で project する canonical bridge
+- **Hasse-Weil L predictive content** (§3.3 / N4 §7): weight-2 Hasse-Weil L は **B-native** (Galois rep + Euler product)、本 N1 framework の B-side bridge instance、N4 で genuine BSD analytic rank detector として活躍
+- **Dirichlet L** (N3 §4): weight-1 Dirichlet L は **A-native** (有限 character on finite group)、framework predictive content は "structural fit only" に degrade — direction-tag native scope
+
+**Cross-direction bridge instances (本論 §4-§6)**:
+- **S14 = π / ln 2** (`c_arrow_bridge_constants §4` + 本論 §4.5): Arrow 1 (π involution A-side) / Arrow 2 (ln 2 involution B-side) **canonical bridge** (role-match involution × involution)、N1 (A-primary) と Q1 (B-primary) framework header をつなぐ ratio
+- **S_0 = 2π/e** (`c_arrow_bridge_constants §13` ESTABLISHED): Arrow 1 (2π period A) / Arrow 3 (e argmax B) bridge ratio、framework universality を A/B 双方の anchor で固定
+- **κ(2) = √3/4 candidate** (`c_recursive_floor_principle §6.7`): A-native (2D JP iteration) ↔ B-native (closed-form algebra) **cross-direction near-coincidence without bridge** = direction-tag screening rule G1 REJECT 予測 instance、forward-actionable promotion path = bridge operator construction OQ
+- **N4 weight-class transfer pattern** (N4 §7.2.1): weight-2 Hasse-Weil B↔B genuine BSD / weight-1 Dirichlet A↔B "structural fit only" の **direction-tag による weight-class dependent transfer pattern** の root cause 説明 = `feedback_cross_direction_identity_screen` 6/6 forward test reference instance #2
+
+**Screening rule application**: 本論内で identity claim する際、relevant quantity が A-native / B-native / bridge / transition か必ず tag、cross-direction で bridge operator (lim / projection / Hecke / regulator 等) 不在なら strict identity を near-coincidence + bridge candidate に reroute (`feedback_cross_direction_identity_screen` 5-step operational order)。Q1 §1.4 / I1 §1.4 と parallel position。
+
+**N1 / Q1 / I1 framework header parallel** (cross-paper):
+
+| Header | Native primary | Bridge instance prominent |
+|---|---|---|
+| **N1 (NT)** | **A-primary** | π (S14 num), class number formula bridge $h = \lim(s-1)L$ (rank-0) |
+| Q1 (Quantum) | B-primary | σ\* (S4), Born rule projection |
+| I1 (Information) | A + B co-resident (Hartley A / Shannon B 1+4 split) | S_0 = 2π/e, S13 ln 2, σ\* |
+
+3 header の direction-axis triangulation = framework universality を A-side / B-side / co-resident anchor で **3-instance verify**、NT-Quantum bridge は I framework が operational language layer で支える。
+
+**Audit reference**: `project_graveyard_audit_complete_2026_05_01` (Tier 1-4 audit completion)、`feedback_cross_direction_identity_screen` (5-step operational order)。
+
 ---
 
 ## §2 観測理論の公理
